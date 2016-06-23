@@ -2605,7 +2605,7 @@ a.top-link i {
 .header-page.timetable h2 {
   margin-bottom: 0.25em;
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 72em) {
   .header-page.timetable h2 {
     margin-bottom: 0;
   }
@@ -2624,7 +2624,7 @@ a.top-link i {
   content: "";
   display: table;
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 72em) {
   .timetable-index > ul > li {
     margin-bottom: 0;
     margin-left: 2em;
@@ -2650,7 +2650,7 @@ a.top-link i {
 }
 .timetable-index > ul > li > ul li {
   display: inline;
-  margin-right: 0.5em;
+  margin-right: 0.35em;
 }
 .timetable-index > ul > li > ul li:last-child {
   margin-right: 0;
