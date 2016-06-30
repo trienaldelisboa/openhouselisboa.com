@@ -3170,6 +3170,14 @@ h3 .soldout {
   font-weight: 400;
 }
 
+#place-podcast audio {
+  width: 100%;
+  max-width: 360px;
+}
+#place-podcast .podcast-notes li p {
+  margin: 0;
+}
+
 .partners-block {
   padding-bottom: 3em;
 }
