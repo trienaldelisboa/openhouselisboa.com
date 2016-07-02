@@ -1991,7 +1991,7 @@ a.link-share:hover i[class$="white"] {
     float: left;
     display: block;
     margin-right: 2.98507%;
-    width: 31.34328%;
+    width: 48.50746%;
     margin-bottom: 0;
   }
   .places-nav > div:last-child {
@@ -2001,7 +2001,7 @@ a.link-share:hover i[class$="white"] {
     float: left;
     display: block;
     margin-right: 2.98507%;
-    width: 31.34328%;
+    width: 48.50746%;
     margin-bottom: 0;
   }
   .places-nav > div:first-child:last-child {
@@ -2012,11 +2012,19 @@ a.link-share:hover i[class$="white"] {
 .taxonomy-selector {
   margin-bottom: 1em;
 }
+.taxonomy-selector:only-child {
+  margin-bottom: 0;
+}
 .taxonomy-selector li {
   float: left;
   height: 2.5em;
-  width: 33%;
+  width: 25%;
   position: relative;
+}
+@media screen and (max-width: 34em) {
+  .taxonomy-selector li {
+    width: 50%;
+  }
 }
 .taxonomy-selector li a {
   position: absolute;
@@ -2046,17 +2054,28 @@ a.link-share:hover i[class$="white"] {
   color: #fff;
   border-color: #fff;
 }
-.taxonomy-selector li:first-child {
-  width: 33.5%;
-}
-.taxonomy-selector li:first-child a {
+.taxonomy-selector li a {
   border-right: none;
 }
-.taxonomy-selector li:last-child {
-  width: 33.5%;
-}
 .taxonomy-selector li:last-child a {
-  border-left: none;
+  border-right: 2px solid #fff;
+}
+@media screen and (max-width: 34em) {
+  .taxonomy-selector li a {
+    border-right: 2px solid #fff;
+  }
+  .taxonomy-selector li:nth-child(1) a, .taxonomy-selector li:nth-child(3) a {
+    border-right: 1px solid #fff;
+  }
+  .taxonomy-selector li:nth-child(1) a, .taxonomy-selector li:nth-child(2) a {
+    border-bottom: 1px solid #fff;
+  }
+  .taxonomy-selector li:nth-child(2) a, .taxonomy-selector li:nth-child(4) a {
+    border-left: 1px solid #fff;
+  }
+  .taxonomy-selector li:nth-child(3) a, .taxonomy-selector li:nth-child(4) a {
+    border-top: 1px solid #fff;
+  }
 }
 
 .timeslots-selector {
