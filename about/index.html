@@ -260,57 +260,98 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     <section class="about partners-banner">
       <h3 id="colophon">Ficha Técnica</h3>
-      <dl class="staff-block">
+      
+<div class="staff-block">
+  
+  <h4>Open House Lisboa</h4>
+  <dl>
+    
+    <dt>Coordenação:</dt>
+    
+    <dd>Inês Marques</dd>
+    
+    
+    <dt>Programa de Voluntariado:</dt>
+    
+    <dd>Susana Gaudêncio</dd>
+    
+    
+    <dt>Design:</dt>
+    
+    <dd>Vivóeusébio</dd>
+    
+    
+    <dt>Website:</dt>
+    
+    <dd>Bit Basement</dd>
+    
+    
+    <dt>Typefont:</dt>
+    
+    <dd>Van Condensed by Ricardo Santos</dd>
+    
+    
+  </dl>
+  
+  <h4>Trienal de Arquitectura de Lisboa</h4>
+  <dl>
+    
+    <dt>Direcção:</dt>
+    
+    <dd>José Mateus, Presidente Executivo</dd>
+    
+    <dd>Nuno Sampaio, Vice-Presidente</dd>
+    
+    <dd>José Manuel dos Santos, Vogal</dd>
+    
+    <dd>Maria Dalila Rodrigues, Vogal</dd>
+    
+    <dd>Pedro Araújo e Sá, Vogal</dd>
+    
+    
+    <dt>Director Adjunto:</dt>
+    
+    <dd>Manuel Henriques</dd>
+    
+    
+    <dt>Assistente de Direcção:</dt>
+    
+    <dd>Helena Soares</dd>
+    
+    
+    <dt>Produção:</dt>
+    
+    <dd>Isabel Antunes (coordenação)</dd>
+    
+    <dd>André Gonçalves</dd>
+    
+    <dd>Inês Marques</dd>
+    
+    <dd>Liliana Lino</dd>
+    
+    <dd>Sofia Baptista</dd>
+    
+    
+    <dt>Comunicação e Imprensa:</dt>
+    
+    <dd>Sara Battesti (coordenação)</dd>
+    
+    <dd>Cláudia Duarte</dd>
+    
+    <dd>Inês Revés</dd>
+    
+    <dd>Raquel Guerreiro</dd>
+    
+    
+    <dt>Financiamento e Parcerias:</dt>
+    
+    <dd>Joana Salvado</dd>
+    
+    
+  </dl>
+  
+</div>
 
-  <dt>OPEN HOUSE LISBOA</dt>
-    
-  <dt>Coordenação:</dt>
-  <dd>Inês Marques</dd>
-  
-  <dt>Programa de Voluntariado:</dt>
-  <dd>Susana Gaudêncio</dd>
-    
-  <dt>Design:</dt>
-  <dd>Vivóeusébio</dd>
-  
-  <dt>Website:</dt>
-  <dd>Bit Basement</dd>
-  
-  <dt>Typefont:</dt>
-  <dd>Van Condensed by Ricardo Santos</dd>
-    
-  <dt>TRIENAL DE ARQUITECTURA DE LISBOA</dt>
-  
-  <dt>Direcção:</dt>
-  <dd>José Mateus, Presidente Executivo</dd>
-  <dd>Nuno Sampaio, Vice-Presidente</dd>
-  <dd>José Manuel dos Santos, Vogal</dd>
-  <dd>Maria Dalila Rodrigues, Vogal</dd>
-  <dd>Pedro Araújo e Sá, Vogal</dd>
-  
-  <dt>Director Adjunto:</dt>
-  <dd>Manuel Henriques</dd>
-  
-  <dt>Assistente de Direcção:</dt>
-  <dd>Helena Soares</dd>
-  
-  <dt>Produção:</dt>
-  <dd>Isabel Antunes (coordenação)</dd>
-  <dd>André Gonçalves</dd>
-  <dd>Inês Marques</dd>
-  <dd>Liliana Lino</dd>
-  <dd>Sofia Baptista</dd>
-  
-  <dt>Comunicação e Imprensa:</dt>
-  <dd>Sara Battesti (coordenação)</dd>
-  <dd>Cláudia Duarte</dd>
-  <dd>Inês Revés</dd>
-  <dd>Raquel Guerreiro</dd>
-  
-  <dt>Financiamento e Parcerias:</dt>
-  <dd>Joana Salvado</dd>
-  
-</dl>
     </section>
     
   </div>
@@ -364,6 +405,58 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
   </div>
 </footer>
 
+
+    <div id="now-button" style="display: none;">
+      <a href="/timetable/">Espaços Abertos Agora ➔</a>
+    </div>
+    
+    <script>
+      var now;
+      var current_time;
+      var current_code;
+      var times;
+      var visitsAvailable = false;
+      var timetable_url = $("#now-button a").attr("href");
+      var timetable_code_url;
+      
+      function checkTimes() {
+        
+        now = new Date();
+        current_time = now.getTime();
+        
+        $.each(times, function(index, obj) {
+          var start = new Date(obj.start);
+          var start_time = start.getTime();
+          var end = new Date(obj.end);
+          var end_time = end.getTime();
+          var timetable_code = obj.code;
+          if (current_time >= start_time && current_time < end_time) {
+            visitsAvailable = true;
+            current_code = timetable_code;
+          }
+        });
+
+        if (visitsAvailable == true) {
+          var timetable_code_url = timetable_url + "#" + current_code;
+          $("#now-button a").attr("href", timetable_code_url);
+          $("#now-button").show();
+        } else {
+          $("#now-button").hide();
+        }
+
+      }
+      
+      $(function(){
+        
+        $.getJSON("/times.json", function(json) {
+          times = json;
+          
+          setInterval(checkTimes, 1000);
+          
+        });
+        
+      });
+    </script>
 
     
     <script>

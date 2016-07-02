@@ -312,6 +312,58 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </footer>
 
 
+    <div id="now-button" style="display: none;">
+      <a href="/timetable/">Espaços Abertos Agora ➔</a>
+    </div>
+    
+    <script>
+      var now;
+      var current_time;
+      var current_code;
+      var times;
+      var visitsAvailable = false;
+      var timetable_url = $("#now-button a").attr("href");
+      var timetable_code_url;
+      
+      function checkTimes() {
+        
+        now = new Date();
+        current_time = now.getTime();
+        
+        $.each(times, function(index, obj) {
+          var start = new Date(obj.start);
+          var start_time = start.getTime();
+          var end = new Date(obj.end);
+          var end_time = end.getTime();
+          var timetable_code = obj.code;
+          if (current_time >= start_time && current_time < end_time) {
+            visitsAvailable = true;
+            current_code = timetable_code;
+          }
+        });
+
+        if (visitsAvailable == true) {
+          var timetable_code_url = timetable_url + "#" + current_code;
+          $("#now-button a").attr("href", timetable_code_url);
+          $("#now-button").show();
+        } else {
+          $("#now-button").hide();
+        }
+
+      }
+      
+      $(function(){
+        
+        $.getJSON("/times.json", function(json) {
+          times = json;
+          
+          setInterval(checkTimes, 1000);
+          
+        });
+        
+      });
+    </script>
+
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
