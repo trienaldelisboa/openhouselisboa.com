@@ -3398,16 +3398,19 @@ article.post .post-share li {
 #now-button.now-timetable {
   left: 2em;
   right: auto;
+  bottom: 2em;
 }
 @media screen and (max-width: 34em) {
   #now-button.now-timetable {
     left: 1.5em;
+    bottom: 1.5em;
   }
 }
 @media screen and (min-width: 40em) {
   #now-button.now-timetable {
     left: auto;
     right: 1em;
+    bottom: 1em;
   }
 }
 #now-button.now-timetable a {
