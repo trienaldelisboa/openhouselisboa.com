@@ -2126,7 +2126,7 @@ a.link-share:hover i[class$="white"] {
 }
 
 .tag-section .place-thumb-container {
-  margin-bottom: 5%;
+  margin-bottom: 3%;
   float: left;
   display: block;
   margin-right: 2.98507%;
@@ -2166,7 +2166,6 @@ a.link-share:hover i[class$="white"] {
 }
 @media screen and (min-width: 57em) {
   .tag-section .place-thumb-container {
-    margin-bottom: 3.75%;
     float: left;
     display: block;
     margin-right: 2.98507%;
