@@ -1,6 +1,5 @@
 
 
-@charset "UTF-8";
 /*!============================================================= *
 
    Open House Lisboa
@@ -1967,26 +1966,13 @@ a.link-share:hover i[class$="white"] {
     float: left;
     display: block;
     margin-right: 2.98507%;
-    width: 48.50746%;
+    width: 100%;
   }
   .places-nav > div:last-child {
     margin-right: 0;
   }
-  .places-nav > div:first-child {
-    float: left;
-    display: block;
-    margin-right: 2.98507%;
-    width: 100%;
-    margin-bottom: 3%;
-  }
-  .places-nav > div:first-child:last-child {
-    margin-right: 0;
-  }
-  .places-nav > div:nth-child(2) {
-    margin-bottom: 0;
-  }
 }
-@media screen and (min-width: 68em) {
+@media screen and (min-width: 57em) {
   .places-nav > div {
     float: left;
     display: block;
@@ -1997,24 +1983,8 @@ a.link-share:hover i[class$="white"] {
   .places-nav > div:last-child {
     margin-right: 0;
   }
-  .places-nav > div:first-child {
-    float: left;
-    display: block;
-    margin-right: 2.98507%;
-    width: 48.50746%;
-    margin-bottom: 0;
-  }
-  .places-nav > div:first-child:last-child {
-    margin-right: 0;
-  }
 }
 
-.taxonomy-selector {
-  margin-bottom: 1em;
-}
-.taxonomy-selector:only-child {
-  margin-bottom: 0;
-}
 .taxonomy-selector li {
   float: left;
   height: 2.5em;
@@ -2078,114 +2048,13 @@ a.link-share:hover i[class$="white"] {
   }
 }
 
-.timeslots-selector {
-  position: relative;
-  color: #fff;
-  margin-bottom: 1em;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-}
-.timeslots-selector .timeslots-status {
-  cursor: pointer;
-  border: 2px solid #fff;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-}
-.timeslots-selector .timeslots-status:hover, .timeslots-selector .timeslots-status:active {
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-}
-.timeslots-selector .timeslots-status p {
-  padding: 0 0.75em;
-  margin: 0;
-  line-height: 2.25em;
-  vertical-align: middle;
-}
-@media screen and (min-width: 40em) {
-  .timeslots-selector .timeslots-options {
-    position: absolute;
-    width: 100%;
-    z-index: 1000;
-  }
-}
-.timeslots-selector fieldset {
-  background-color: #000000;
-  border: 2px solid #fff;
-  display: block;
-  padding: 0;
-  margin: -2px 0 0 0;
-  -webkit-box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.1);
-  box-shadow: 0 0.25em 0.25em rgba(0, 0, 0, 0.1);
-}
-.timeslots-selector fieldset p {
-  margin: 0;
-  background-color: rgba(255, 255, 255, 0);
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-}
-.timeslots-selector fieldset p::after {
-  clear: both;
-  content: "";
-  display: table;
-}
-.timeslots-selector fieldset p:hover,
-.timeslots-selector fieldset p:active {
-  background-color: rgba(255, 255, 255, 0.2);
-  -webkit-transition: background-color 0.2s ease;
-  transition: background-color 0.2s ease;
-}
-.timeslots-selector fieldset label {
-  display: inline-block;
-  float: left;
-  font-weight: 400;
-  margin: 0;
-  padding: 0 0.75em 0.5em;
-  width: 100%;
-  cursor: pointer;
-}
-.timeslots-selector fieldset label:first-child {
-  padding-top: 0.5em;
-}
-.timeslots-selector fieldset input {
-  display: block;
-  position: absolute;
-  right: 1em;
-  margin: 0.8125em 0 0;
-  cursor: pointer;
-}
-
-.timeslots-status p:after {
-  content: "▲";
-  float: right;
-  margin-right: 0.0625em;
-}
-
-.selector-active .timeslots-status {
-  color: #000000;
-  font-weight: 700;
-}
-.selector-active .timeslots-status,
-.selector-active .timeslots-status:hover,
-.selector-active .timeslots-status:active {
-  background-color: #fff;
-}
-
-.dropdown-closed .timeslots-status {
-  margin-bottom: 0;
-}
-.dropdown-closed .timeslots-status p:after {
-  content: "▼";
-}
-.dropdown-closed .timeslots-options {
-  display: none;
-}
-
 .search-filter {
-  margin-bottom: 0;
+  margin-top: 1em;
+}
+@media screen and (min-width: 57em) {
+  .search-filter {
+    margin-top: 0;
+  }
 }
 .search-filter p {
   margin: 0;

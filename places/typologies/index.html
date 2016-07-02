@@ -177,13 +177,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     </nav>
   </div>
 
-  
+  <div class="search-filter" style="display: none;">
+    <p>
+      <input type="search" name="search" placeholder="Search" />
+    </p>
+  </div>
   
 </header>
 
-
-
-<div class="page">
+<div class="page" id="places">
 
 
 
@@ -2120,7 +2122,7 @@ function removeHiddenElements() {
 function filter(textToFilter, checkHeaders, rewriteAll) {
 
 	if(rewriteAll || $('section.tag-section ul li').length == 0) {
-		$('div#places_wrapper').html(allPlaces);
+		$('div#places').html(allPlaces);
 	}
 	var counter = 0;
 	$('section.tag-section').each(function(){
@@ -2137,53 +2139,21 @@ function filter(textToFilter, checkHeaders, rewriteAll) {
 }
 
 function filterPlaces() {
-	$('div#places_wrapper').html(allPlaces);
-	$('section.tag-section ul li').hide();
-	var counter = 0;
-	$('input[name="timeslot"]').each(function() {
-		if($(this).is(":checked")) {
-			$('section.tag-section ul li[timeslots-data*="'+$(this).attr("value")+'"]').show();
-			//$('section.tag-section ul li:not([timeslots-data*="'+$(this).attr("value")+'"])').hide();
-			counter++;
-		} 
-	});
-	if (counter == 0 || counter == 4) {
-		$('section.tag-section ul li').show();
-		$('.timeslots-selector').removeClass('selector-active');
-		$('p#no_selection:hidden').show();
-		$('p#selection:visible').hide();
-
-
-	} else if(counter > 0 && counter<4) {
-		if(!$('.timeslots-selector').hasClass('selector-active')) {
-			$('.timeslots-selector').addClass('selector-active');
-		}
-			$('p#no_selection:visible').hide();
-			$('p#selection:hidden').show();
-			$('p#selection span').html(""+counter); 
-			removeHiddenElements();
-
-	}
+	$('div#places').html(allPlaces);
+	$('section.tag-section ul li').show();
 	var searchInput = $('.search-filter p input[name="search"]');
 	if (searchInput.val().length > 0) {
 		filter(searchInput.val(), false, false);
 	}
 	checkListHeaders()
-
 }
 
 $(document).ready(function () {
 
-	allPlaces = $('div#places_wrapper').html();
+  $('.search-filter').show();
 
-	$('input[name="timeslot"]').change(function () {
-		filterPlaces();
-	});
+	allPlaces = $('div#places').html();
 
-	$(".timeslots-status").on('click', function(e) {
-		$(this).parent().toggleClass('dropdown-closed');
-	});
-	
 	$('.search-filter p input[name="search"]').each(function() {
 		var elem = $(this);
    		// Save current value of element
