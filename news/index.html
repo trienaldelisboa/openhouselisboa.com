@@ -113,6 +113,10 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
   </div>
 
+
+  
+  
+  
   <nav class="site-nav" role="navigation">
     <ul>
       
@@ -143,6 +147,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
       
     </ul>
   </nav>
+  
 
 </header>
 
@@ -194,10 +199,10 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         </ul>
         
         
-        <p class="contact-link">Se quer ser um parceiro, diga-nos <a href="mailto:joana.salvado@trienaldelisboa.com">aqui</a> onde vamos beber café</p>
+        <p class="contact-link"><a href="mailto:joana.salvado@trienaldelisboa.com">Se quer ser um parceiro, diga-nos onde vamos beber café</a></p>
         
         
-        <p class="contact-link">Se for um arquitecto, provoque-nos <a href="mailto:openhouselisboa@trienaldelisboa.com">aqui</a></p>
+        <p class="contact-link"><a href="mailto:openhouselisboa@trienaldelisboa.com">Se for um arquitecto, provoque-nos</a></p>
         
         
         
@@ -217,59 +222,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </footer>
 
 
-    <div id="now-button" style="display: none;">
-      
-      <a href="/timetable/">Espaços Abertos Agora ➔</a>
-      
-    </div>
     
-    <script>
-      var now;
-      var current_time;
-      var current_code;
-      var times;
-      var visitsAvailable = false;
-      var timetable_url = $("#now-button a").attr("href");
-      var timetable_code_url;
-      
-      function checkTimes() {
-        
-        now = new Date();
-        current_time = now.getTime();
-        
-        $.each(times, function(index, obj) {
-          var start = new Date(obj.start);
-          var start_time = start.getTime();
-          var end = new Date(obj.end);
-          var end_time = end.getTime();
-          var timetable_code = obj.code;
-          if (current_time >= start_time && current_time < end_time) {
-            visitsAvailable = true;
-            current_code = timetable_code;
-          }
-        });
-
-        if (visitsAvailable == true) {
-          var timetable_code_url = timetable_url + "#" + current_code;
-          $("#now-button a").attr("href", timetable_code_url);
-          $("#now-button").show();
-        } else {
-          $("#now-button").hide();
-        }
-
-      }
-      
-      $(function(){
-        
-        $.getJSON("/times.json", function(json) {
-          times = json;
-          
-          setInterval(checkTimes, 1000);
-          
-        });
-        
-      });
-    </script>
+    
 
     
     <script>
