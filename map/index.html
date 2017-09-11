@@ -135,13 +135,23 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
       
       
       
+      <li><a class="page-link" href="/places/zones/">Roteiro</a></li>
       
       
       
+      <li><a class="page-link" href="/map/">Mapa</a></li>
       
       
       
+      <li><a class="page-link" href="/timetable/">Horários</a></li>
       
+      
+      
+      <li><a class="page-link" href="/plus/">Plus</a></li>
+      
+      
+      
+      <li><a class="page-link" href="/junior/">Júnior</a></li>
       
       
       
@@ -173,13 +183,727 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </header>
 
 
-<div class="page not-found">
+<div class="page map-page">
+  <div id="view1">
+    <script src="/assets/js/map.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+    <script src="/assets/js/richmarker-min.js"></script>
+    <script type="text/javascript">
+      var markers =
+        [
+          
+          
+          {
+            "lat": 38.77559,
+            "lng": -9.13536,
+            "number": "87",
+            "title": "Aeroporto Humberto Delgado",
+            "url": "/places/aeroporto-humberto-delgado/"
+          },
+          
+          {
+            "lat": 38.69327,
+            "lng": -9.21081,
+            "number": "2",
+            "title": "Altis Belém Hotel & Spa",
+            "url": "/places/altis-belem-hotel-spa/"
+          },
+          
+          {
+            "lat": 38.72375,
+            "lng": -9.16132,
+            "number": "63",
+            "title": "Amoreiras 360º Panoramic View",
+            "url": "/places/amoreiras-360-panoramic-view/"
+          },
+          
+          {
+            "lat": 38.71075,
+            "lng": -9.14411,
+            "number": "29",
+            "title": "Apartamento ao Chiado",
+            "url": "/places/apartamento-ao-chiado/"
+          },
+          
+          {
+            "lat": 38.70449,
+            "lng": -9.16553,
+            "number": "10",
+            "title": "Apartamento Arriaga",
+            "url": "/places/apartamento-arriaga/"
+          },
+          
+          {
+            "lat": 38.71231,
+            "lng": -9.12649,
+            "number": "46",
+            "title": "Apartamento em Alfama",
+            "url": "/places/apartamento-em-alfama/"
+          },
+          
+          {
+            "lat": 38.74587,
+            "lng": -9.13767,
+            "number": "80",
+            "title": "Apartamento Estacas",
+            "url": "/places/apartamento-estacas/"
+          },
+          
+          {
+            "lat": 38.74891,
+            "lng": -9.14127,
+            "number": "79",
+            "title": "Apartamento na Av. Estados Unidos da América",
+            "url": "/places/apartamento-na-av-estados-unidos-da-america/"
+          },
+          
+          {
+            "lat": 38.71147,
+            "lng": -9.15318,
+            "number": "14",
+            "title": "Apartamento na Calçada da Estrela",
+            "url": "/places/apartamento-na-calcada-da-estrela/"
+          },
+          
+          {
+            "lat": 38.71239,
+            "lng": -9.15607,
+            "number": "13",
+            "title": "Apartamento na Estrela",
+            "url": "/places/apartamento-na-estrela/"
+          },
+          
+          {
+            "lat": 38.72396,
+            "lng": -9.15397,
+            "number": "66",
+            "title": "Apartamento na Rodrigo da Fonseca",
+            "url": "/places/apartamento-na-rodrigo-da-fonseca/"
+          },
+          
+          {
+            "lat": 38.72666,
+            "lng": -9.16648,
+            "number": "62",
+            "title": "Aqueduto das Águas Livres",
+            "url": "/places/aqueduto-das-aguas-livres/"
+          },
+          
+          {
+            "lat": 38.73107,
+            "lng": -9.11678,
+            "number": "82",
+            "title": "Ar.Co - Centro de Arte e Comunicação Visual",
+            "url": "/places/ar-co/"
+          },
+          
+          {
+            "lat": 38.7104,
+            "lng": -9.13422,
+            "number": "40",
+            "title": "Atelier Calçada do Correio Velho e Porta 14",
+            "url": "/places/atelier-calcada-do-correio-velho-e-porta-14/"
+          },
+          
+          {
+            "lat": 38.71135,
+            "lng": -9.15042,
+            "number": "15",
+            "title": "Atelier-Museu Júlio Pomar",
+            "url": "/places/atelier-museu-julio-pomar/"
+          },
+          
+          {
+            "lat": 38.7095,
+            "lng": -9.14813,
+            "number": "23",
+            "title": "Atelier Oporto",
+            "url": "/places/atelier-oporto/"
+          },
+          
+          {
+            "lat": 38.71025,
+            "lng": -9.1503,
+            "number": "16",
+            "title": "Atelier Reabilitado em Madeira, Terra e Cal",
+            "url": "/places/atelier-reabilitado-em-madeira-terra-e-cal/"
+          },
+          
+          {
+            "lat": 38.70777,
+            "lng": -9.14574,
+            "number": "22",
+            "title": "Banhos de S. Paulo - Sede Nacional da Ordem dos Arquitectos",
+            "url": "/places/banhos-sao-paulo/"
+          },
+          
+          {
+            "lat": 38.7511,
+            "lng": -9.15258,
+            "number": "76",
+            "title": "Biblioteca Nacional de Portugal",
+            "url": "/places/biblioteca-nacional-de-portugal/"
+          },
+          
+          {
+            "lat": 38.70833,
+            "lng": -9.13298,
+            "number": "44",
+            "title": "Campo das Cebolas",
+            "url": "/places/campo-das-cebolas/"
+          },
+          
+          {
+            "lat": 38.73744,
+            "lng": -9.14306,
+            "number": "72",
+            "title": "Casa da Moeda",
+            "url": "/places/casa-da-moeda/"
+          },
+          
+          {
+            "lat": 38.69688,
+            "lng": -9.19422,
+            "number": "7",
+            "title": "Casa das Galeotas - Casa da América Latina e UCCLA",
+            "url": "/places/casa-das-galeotas/"
+          },
+          
+          {
+            "lat": 38.70903,
+            "lng": -9.13268,
+            "number": "43",
+            "title": "Fundação José Saramago - Casa dos Bicos",
+            "url": "/places/casa-dos-bicos/"
+          },
+          
+          {
+            "lat": 38.71727,
+            "lng": -9.15989,
+            "number": "58",
+            "title": "Casa Fernando Pessoa",
+            "url": "/places/casa-fernando-pessoa/"
+          },
+          
+          {
+            "lat": 38.7326,
+            "lng": -9.14642,
+            "number": "71",
+            "title": "Casa-Museu Dr. Anastácio Gonçalves",
+            "url": "/places/casa-museu-dr-anastacio-goncalves/"
+          },
+          
+          {
+            "lat": 38.71218,
+            "lng": -9.13216,
+            "number": "39",
+            "title": "Casa Pascal Lobry",
+            "url": "/places/casa-pascal-lobry/"
+          },
+          
+          {
+            "lat": 38.70941,
+            "lng": -9.15033,
+            "number": "17",
+            "title": "Casa Zero",
+            "url": "/places/casa-zero/"
+          },
+          
+          {
+            "lat": 38.71402,
+            "lng": -9.1699,
+            "number": "59",
+            "title": "Cemitério dos Prazeres",
+            "url": "/places/cemiterio-dos-prazeres/"
+          },
+          
+          {
+            "lat": 38.78531,
+            "lng": -9.09859,
+            "number": "86",
+            "title": "Central Norte de Recolha Pneumática de Resíduos Urbanos",
+            "url": "/places/central-norte-de-recolha-pneumatica-de-residuos-urbanos/"
+          },
+          
+          {
+            "lat": 38.6955,
+            "lng": -9.20835,
+            "number": "3",
+            "title": "Centro Cultural de Belém",
+            "url": "/places/centro-cultural-de-belem/"
+          },
+          
+          {
+            "lat": 38.72591,
+            "lng": -9.17029,
+            "number": "61",
+            "title": "Centro de Meditação",
+            "url": "/places/centro-de-meditacao/"
+          },
+          
+          {
+            "lat": 38.71642,
+            "lng": -9.13269,
+            "number": "48",
+            "title": "Centro de Inovação da Mouraria",
+            "url": "/places/centro-inovacao-da-mouraria/"
+          },
+          
+          {
+            "lat": 38.75022,
+            "lng": -9.16988,
+            "number": "75",
+            "title": "Centro Ismaili",
+            "url": "/places/centro-ismaili/"
+          },
+          
+          {
+            "lat": 38.73114,
+            "lng": -9.15608,
+            "number": "70",
+            "title": "Corredor Verde",
+            "url": "/places/corredor-verde/"
+          },
+          
+          {
+            "lat": 38.71727,
+            "lng": -9.15989,
+            "number": "57",
+            "title": "Escola de Hotelaria e Turismo de Lisboa",
+            "url": "/places/escola-de-hotelaria-e-turismo-de-lisboa/"
+          },
+          
+          {
+            "lat": 38.70618,
+            "lng": -9.18704,
+            "number": "9",
+            "title": "Escola Francisco de Arruda",
+            "url": "/places/escola-francisco-arruda/"
+          },
+          
+          {
+            "lat": 38.74684,
+            "lng": -9.1533,
+            "number": "77",
+            "title": "Escritório Pure",
+            "url": "/places/escritorio-pure/"
+          },
+          
+          {
+            "lat": 38.73741,
+            "lng": -9.15471,
+            "number": "69",
+            "title": "Fundação Calouste Gulbenkian",
+            "url": "/places/fundacao-calouste-gulbenkian/"
+          },
+          
+          {
+            "lat": 38.69349,
+            "lng": -9.22153,
+            "number": "1",
+            "title": "Fundação Champalimaud",
+            "url": "/places/fundacao-champalimaud/"
+          },
+          
+          {
+            "lat": 38.72177,
+            "lng": -9.15544,
+            "number": "65",
+            "title": "Galeria do Loreto",
+            "url": "/places/galeria-do-loreto/"
+          },
+          
+          {
+            "lat": 38.75103,
+            "lng": -9.14419,
+            "number": "78",
+            "title": "Galeria Quadrum",
+            "url": "/places/galeria-quadrum/"
+          },
+          
+          {
+            "lat": 38.70166,
+            "lng": -9.16193,
+            "number": "11",
+            "title": "Gare Marítima da Rocha do Conde de Óbidos",
+            "url": "/places/gare-maritima-rocha-conde-obidos/"
+          },
+          
+          {
+            "lat": 38.72153,
+            "lng": -9.14555,
+            "number": "51",
+            "title": "Hotel Britânia",
+            "url": "/places/hotel-britania/"
+          },
+          
+          {
+            "lat": 38.72556,
+            "lng": -9.1552,
+            "number": "67",
+            "title": "Hotel Ritz",
+            "url": "/places/hotel-ritz/"
+          },
+          
+          {
+            "lat": 38.70963,
+            "lng": -9.14734,
+            "number": "24",
+            "title": "Hotel Verride - Palácio Sta. Catarina",
+            "url": "/places/hotel-verride/"
+          },
+          
+          {
+            "lat": 38.72479,
+            "lng": -9.14721,
+            "number": "50",
+            "title": "Igreja Sagrado Coração de Jesus",
+            "url": "/places/igreja-sagrado-coracao-de-lisboa/"
+          },
+          
+          {
+            "lat": 38.71351,
+            "lng": -9.14346,
+            "number": "27",
+            "title": "Igreja de São Roque",
+            "url": "/places/igrerja-de-sao-roque/"
+          },
+          
+          {
+            "lat": 38.7179,
+            "lng": -9.15188,
+            "number": "56",
+            "title": "Imprensa Nacional",
+            "url": "/places/imprensa-nacional/"
+          },
+          
+          {
+            "lat": 38.71767,
+            "lng": -9.1508,
+            "number": "55",
+            "title": "Laboratório Chimico - MUHNAC",
+            "url": "/places/laboratorio-chimico/"
+          },
+          
+          {
+            "lat": 38.7127,
+            "lng": -9.14331,
+            "number": "28",
+            "title": "Loja Claus Porto",
+            "url": "/places/loja-claus-porto/"
+          },
+          
+          {
+            "lat": 38.76348,
+            "lng": -9.09851,
+            "number": "84",
+            "title": "Loja Sotheby's",
+            "url": "/places/loja-sothebys/"
+          },
+          
+          {
+            "lat": 38.69587,
+            "lng": -9.19559,
+            "number": "5",
+            "title": "MAAT - Central Tejo",
+            "url": "/places/maat-central-tejo/"
+          },
+          
+          {
+            "lat": 38.69592,
+            "lng": -9.19445,
+            "number": "6",
+            "title": "MAAT - Edifício Novo",
+            "url": "/places/maat-edificio-novo/"
+          },
+          
+          {
+            "lat": 38.71578,
+            "lng": -9.146,
+            "number": "52",
+            "title": "Memmo Príncipe Real",
+            "url": "/places/memmo-principe-real/"
+          },
+          
+          {
+            "lat": 38.7136,
+            "lng": -9.14523,
+            "number": "26",
+            "title": "Mercado do Bairro Alto",
+            "url": "/places/mercado-do-bairro-alto/"
+          },
+          
+          {
+            "lat": 38.7091,
+            "lng": -9.13684,
+            "number": "36",
+            "title": "MUDE – Visita de Obra",
+            "url": "/places/mude/"
+          },
+          
+          {
+            "lat": 38.70793,
+            "lng": -9.15583,
+            "number": "12",
+            "title": "Convento das Bernardas - Museu da Marioneta",
+            "url": "/places/museu-da-marioneta/"
+          },
+          
+          {
+            "lat": 38.71007,
+            "lng": -9.13388,
+            "number": "41",
+            "title": "Museu de Lisboa - Santo António",
+            "url": "/places/museu-de-lisboa-santo-antonio/"
+          },
+          
+          {
+            "lat": 38.71045,
+            "lng": -9.13235,
+            "number": "42",
+            "title": "Museu de Lisboa - Teatro Romano",
+            "url": "/places/museu-de-lisboa-teatro-romano/"
+          },
+          
+          {
+            "lat": 38.72474,
+            "lng": -9.11414,
+            "number": "81",
+            "title": "Museu Nacional do Azulejo - Convento da Madre de Deus",
+            "url": "/places/museu-nacional-do-azulejo/"
+          },
+          
+          {
+            "lat": 38.69659,
+            "lng": -9.19844,
+            "number": "4",
+            "title": "Museu Nacional dos Coches",
+            "url": "/places/museu-nacional-dos-coches/"
+          },
+          
+          {
+            "lat": 38.70684,
+            "lng": -9.14922,
+            "number": "20",
+            "title": "Nova Sede EDP",
+            "url": "/places/nova-sede-edp/"
+          },
+          
+          {
+            "lat": 38.4258,
+            "lng": -9.81871,
+            "number": "34",
+            "title": "Paços do Concelho",
+            "url": "/places/pacos-do-concelho/"
+          },
+          
+          {
+            "lat": 38.71565,
+            "lng": -9.14926,
+            "number": "54",
+            "title": "Palacete Barão de Santos",
+            "url": "/places/palacete-barao-dos-santos/"
+          },
+          
+          {
+            "lat": 38.70906,
+            "lng": -9.15106,
+            "number": "19",
+            "title": "Palácio Almada Carvalhais",
+            "url": "/places/palacio-almada-carvalhais/"
+          },
+          
+          {
+            "lat": 38.70963,
+            "lng": -9.14296,
+            "number": "30",
+            "title": "Palácio Chiado",
+            "url": "/places/palacio-chiado/"
+          },
+          
+          {
+            "lat": 38.72306,
+            "lng": -9.13851,
+            "number": "49",
+            "title": "Palácio da Bemposta - Academia Militar",
+            "url": "/places/palacio-da-bemposta-academia-militar/"
+          },
+          
+          {
+            "lat": 38.73114,
+            "lng": -9.15608,
+            "number": "68",
+            "title": "Palácio da Justiça",
+            "url": "/places/palacio-da-justica/"
+          },
+          
+          {
+            "lat": 38.70763,
+            "lng": -9.19783,
+            "number": "8",
+            "title": "Palácio Nacional da Ajuda",
+            "url": "/places/palacio-nacional-da-ajuda/"
+          },
+          
+          {
+            "lat": 38.72869,
+            "lng": -9.18448,
+            "number": "60",
+            "title": "Panorâmico de Monsanto",
+            "url": "/places/panoramico/"
+          },
+          
+          {
+            "lat": 38.76584,
+            "lng": -9.09506,
+            "number": "85",
+            "title": "Pavilhão de Portugal",
+            "url": "/places/pavilhao-de-portugal/"
+          },
+          
+          {
+            "lat": 38.71137,
+            "lng": -9.1361,
+            "number": "38",
+            "title": "Percurso Pedonal Assistido da Baixa ao Castelo de S. Jorge",
+            "url": "/places/percurso-pedonal-assistido/"
+          },
+          
+          {
+            "lat": 38.74769,
+            "lng": -9.18958,
+            "number": "74",
+            "title": "Praça Fonte Nova",
+            "url": "/places/praca-fonte-nova/"
+          },
+          
+          {
+            "lat": 38.72145,
+            "lng": -9.15583,
+            "number": "64",
+            "title": "Reservatório da Mãe d´Água das Amoreiras",
+            "url": "/places/reservatorio-da-mae-dagua-das-amoreiras/"
+          },
+          
+          {
+            "lat": 38.71622,
+            "lng": -9.14895,
+            "number": "53",
+            "title": "Reservatório da Patriarcal",
+            "url": "/places/reservatorio-da-patriarcal/"
+          },
+          
+          {
+            "lat": 38.70914,
+            "lng": -9.15095,
+            "number": "18",
+            "title": "Rua das Gaivotas 6 - Teatro Praga",
+            "url": "/places/rua-das-gaivotas-6-teatro-praga/"
+          },
+          
+          {
+            "lat": 38.71565,
+            "lng": -9.12591,
+            "number": "47",
+            "title": "Santa Clara 1728",
+            "url": "/places/santa-clara-1728/"
+          },
+          
+          {
+            "lat": 38.70665,
+            "lng": -9.14533,
+            "number": "21",
+            "title": "Second Home Lisboa",
+            "url": "/places/second-home-lisboa/"
+          },
+          
+          {
+            "lat": 38.7086,
+            "lng": -9.13887,
+            "number": "33",
+            "title": "Sede do Banco de Portugal - Antiga Igreja de S. Julião",
+            "url": "/places/sede-do-banco-de-portugal/"
+          },
+          
+          {
+            "lat": 38.70971,
+            "lng": -9.13726,
+            "number": "37",
+            "title": "Sede da Fundação Millennium bcp",
+            "url": "/places/sede-milennium-bcp/"
+          },
+          
+          {
+            "lat": 38.70858,
+            "lng": -9.13649,
+            "number": "35",
+            "title": "Supremo Tribunal de Justiça",
+            "url": "/places/supremo-tribunal-de-justica/"
+          },
+          
+          {
+            "lat": 38.7148,
+            "lng": -9.13978,
+            "number": "32",
+            "title": "Teatro Nacional D. Maria II",
+            "url": "/places/teatro-d-maria-ii/"
+          },
+          
+          {
+            "lat": 38.71215,
+            "lng": -9.14564,
+            "number": "25",
+            "title": "Teatro do Bairro",
+            "url": "/places/teatro-do-bairro/"
+          },
+          
+          {
+            "lat": 38.70952,
+            "lng": -9.14175,
+            "number": "31",
+            "title": "Teatro Nacional de São Carlos",
+            "url": "/places/teatro-nacional-de-sao-carlos/"
+          },
+          
+          {
+            "lat": 38.74501,
+            "lng": -9.16934,
+            "number": "73",
+            "title": "Teatro Thalia",
+            "url": "/places/teatro-thalia/"
+          },
+          
+          {
+            "lat": 38.71078,
+            "lng": -9.12644,
+            "number": "45",
+            "title": "Terminal de Cruzeiros de Lisboa",
+            "url": "/places/terminal-de-cruzeiros-de-lisboa/"
+          },
+          
+          {
+            "lat": 38.73999,
+            "lng": -9.102,
+            "number": "83",
+            "title": "VERTIGO",
+            "url": "/places/vertigo/"
+          }
+          
+          
+        ];
+      var centerLat = 38.7281;
+      var centerLng = -9.1607;
 
-<h3>Disponível em breve.</h3>
-<p>Voltar à <a href="/">Homepage</a>.</p>
+      window.onload = initMap;
+    </script>
+    <div id="map" style="width: 100%;"></div>
+  </div>
+  
+  
+  <p><a href="/uploads/Mapa_OHL2016_web_02.pdf" class="map-download" target="_blank">Download do Mapa em Formato PDF&nbsp;&#10132;</a></p>
+  
 
 </div>
-
 
 
 
@@ -240,6 +964,59 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 
 
     
+    
+    <div id="now-button" style="display: none;">
+      
+      <a href="/timetable/">Espaços Abertos Agora ➔</a>
+      
+    </div>
+    <script>
+      var now;
+      var current_time;
+      var current_code;
+      var times;
+      var visitsAvailable = false;
+      var timetable_url = $("#now-button a").attr("href");
+      var timetable_code_url;
+      
+      function checkTimes() {
+        
+        now = new Date();
+        current_time = now.getTime();
+        
+        $.each(times, function(index, obj) {
+          var start = new Date(obj.start);
+          var start_time = start.getTime();
+          var end = new Date(obj.end);
+          var end_time = end.getTime();
+          var timetable_code = obj.code;
+          if (current_time >= start_time && current_time < end_time) {
+            visitsAvailable = true;
+            current_code = timetable_code;
+          }
+        });
+
+        if (visitsAvailable == true) {
+          var timetable_code_url = timetable_url + "#" + current_code;
+          $("#now-button a").attr("href", timetable_code_url);
+          $("#now-button").show();
+        } else {
+          $("#now-button").hide();
+        }
+
+      }
+      
+      $(function(){
+        
+        $.getJSON("/times.json", function(json) {
+          times = json;
+          
+          setInterval(checkTimes, 1000);
+          
+        });
+        
+      });
+    </script>
     
 
     
