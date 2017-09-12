@@ -2286,7 +2286,7 @@ a.link-share:hover i[class$="white"] {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  background-color: #F3DCD7;
+  background-color: #f05a28;
 }
 .place-thumb a {
   position: relative;
@@ -2333,7 +2333,6 @@ a.link-share:hover i[class$="white"] {
   position: absolute;
   top: 0;
   color: #fff;
-  text-transform: uppercase;
   letter-spacing: 0;
   font-weight: 700;
   font-size: 1.125em;
