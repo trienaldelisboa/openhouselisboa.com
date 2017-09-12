@@ -3062,6 +3062,7 @@ a.top-link i {
 }
 .tooltip abbr {
   border: none;
+  text-decoration: none;
 }
 
 .tooltip-content {
