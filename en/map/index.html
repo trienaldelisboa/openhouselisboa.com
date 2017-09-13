@@ -37,7 +37,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1505311781337941369">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1505311937328791223">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -184,13 +184,29 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </header>
 
 
-<div class="page not-found">
+<div class="page map-page">
+  <div id="view1">
+    <script src="/assets/js/map.js" type="text/javascript"></script>
+    <script src="https://maps.googleapis.com/maps/api/js" type="text/javascript"></script>
+    <script src="/assets/js/richmarker-min.js"></script>
+    <script type="text/javascript">
+      var markers =
+        [
+          
+          
+          
+        ];
+      var centerLat = 38.7281;
+      var centerLng = -9.1607;
 
-<h3>Coming soon.</h3>
-<p>Back to the <a href="/">Homepage</a>.</p>
+      window.onload = initMap;
+    </script>
+    <div id="map" style="width: 100%;"></div>
+  </div>
+  
+  
 
 </div>
-
 
 
 

@@ -37,7 +37,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1505311781337941369">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1505311937328791223">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -181,15 +181,220 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 
 
 
-<header class="page header-page">
-  <h2>Places</h2>
-</header>
-<div class="page not-found">
+<header class="page header-page places-nav" role="complementary">
+  <h2 style="margin-bottom: 2rem">Places</h2>
+  <div class="taxonomy-selector">
+    <nav>
+      <ul>
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        <li><a class="selected-taxonomy" href="/en/places/zones/">Zones</a></li>
+        
+        
+        
+        <li><a href="/en/places/time-periods/">Time Periods</a></li>
+        
+        
+        
+        <li><a href="/en/places/typologies/">Typologies</a></li>
+        
+        
+        
+        <li><a href="/en/places/accessibility/">Accessibility</a></li>
+        
+        
+      </ul>
+    </nav>
+  </div>
 
-<h3>Coming soon.</h3>
-<p>Back to the <a href="/">Homepage</a>.</p>
+  <div class="search-filter" style="display: none;">
+    <p>
+      <input type="search" name="search" placeholder="Search" />
+    </p>
+  </div>
+  
+</header>
+
+<div class="page" id="places">
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+
+  
+
+  
+
+  
+
+
 
 </div>
+
+<script>
+var allPlaces;
+
+function checkListHeaders() {
+	$('section.tag-section').each(function(){
+		var totalPlacesShownForZone = $(this).find('ul li').filter(function(){ return $(this).css('display') != 'none';}).length
+		if (totalPlacesShownForZone == 0) {
+			$(this).hide();
+		} else {
+			$(this).show();
+		}
+		
+	});	
+}
+
+function removeHiddenElements() {
+	$('section.tag-section ul li:hidden').remove();
+}
+function filter(textToFilter, checkHeaders, rewriteAll) {
+
+	if(rewriteAll || $('section.tag-section ul li').length == 0) {
+		$('div#places').html(allPlaces);
+	}
+	var counter = 0;
+	$('section.tag-section').each(function(){
+		$(this).find('ul li').filter(function(){ return $(this).css('display') != 'none';}).each(function() {
+			var text = $(this).find('div.place-thumb a div.place-meta').text().toLowerCase();
+			(text.indexOf(textToFilter.toLowerCase()) == -1) ? $(this).hide() : $(this).show();         
+		});
+	});
+	if (checkHeaders) {
+		checkListHeaders()
+	}
+	removeHiddenElements();
+
+}
+
+function filterPlaces() {
+	$('div#places').html(allPlaces);
+	$('section.tag-section ul li').show();
+	var searchInput = $('.search-filter p input[name="search"]');
+	if (searchInput.val().length > 0) {
+		filter(searchInput.val(), false, false);
+	}
+	checkListHeaders()
+}
+
+$(document).ready(function () {
+
+  $('.search-filter').show();
+
+	allPlaces = $('div#places').html();
+
+	$('.search-filter p input[name="search"]').each(function() {
+		var elem = $(this);
+   		// Save current value of element
+   		elem.data('oldVal', elem.val());
+
+   		//$('.search-filter p').append('<p>'+ elem.val() +'</p>');
+   		// Look for changes in the value
+   		elem.on("propertychange keyup input paste", function(event){
+      		if (elem.data('oldVal') != elem.val()) {
+       			if (elem.data('oldVal').length > elem.val().length) {
+       				filterPlaces();
+       			}
+       			elem.data('oldVal', elem.val());
+       			filter(elem.val(), true, false);
+   			}
+		});
+   	});
+})
+</script>
 
 
 
