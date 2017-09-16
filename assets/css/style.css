@@ -1153,9 +1153,6 @@ a.link-share:hover i[class$="white"] {
 .site-header .menu-toggle button {
   color: #231F1F;
 }
-.site-header .site-nav a:hover, .site-header .site-nav a:active {
-  color: #fff;
-}
 .site-header .language-switcher a {
   color: #000;
 }
@@ -1382,7 +1379,12 @@ a.link-share:hover i[class$="white"] {
 @media screen and (min-width: 57em) {
   .site-nav a {
     font-size: 1.25em;
+    line-height: 1.25;
   }
+}
+.site-nav a:hover, .site-nav a:focus, .site-nav a:active {
+  color: #F3DCD7;
+  border-bottom-color: #F3DCD7;
 }
 .site-nav ul li {
   display: block;
