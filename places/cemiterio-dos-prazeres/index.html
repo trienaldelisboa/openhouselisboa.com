@@ -39,7 +39,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1506098337441211967">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1506098904716408120">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -50,22 +50,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script type="text/javascript" src="/assets/js/stickyfill.min.js"></script>
     
-    <script>
-      $(function() {
-        $('a[href*=#]:not([href=#])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
-      });
-    </script>
     
     <script>
       /* grunticon Stylesheet Loader | https://github.com/filamentgroup/grunticon | (c) 2012 Scott Jehl, Filament Group, Inc. | MIT license. */
@@ -93,6 +77,9 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
   <body id="top" class="">
 
     
+
+  <a href="#main" id="skip-navigation">Saltar para o conteúdo</a>
+
   <header class="site-header standard-header inverted menu-closed" role="banner">
   <div class="header-wrapper">
     
@@ -188,7 +175,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </header>
 
 
-    <div class="page-content" role="main">
+    <main class="page-content" role="main" id="main">
       
 
 
@@ -419,7 +406,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
   })
 </script>
 
-    </div>
+    </main>
 
     
 <footer class="site-footer" role="contentinfo">

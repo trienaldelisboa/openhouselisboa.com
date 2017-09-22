@@ -1544,6 +1544,21 @@ a.link-share:hover i[class$="white"] {
     display: none !important;
   }
 }
+#skip-navigation {
+  display: block;
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  color: white;
+  background: black;
+  padding: 0.25em 0.5em;
+  z-index: 1000;
+  opacity: 0;
+}
+#skip-navigation:focus {
+  opacity: 1;
+}
+
 .site-footer {
   font-weight: 600;
   text-align: center;
