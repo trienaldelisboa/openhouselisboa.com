@@ -54,6 +54,9 @@ function favourite(idNumber) {
   if (favouritesPage === true) {
     generateShareLinks();
   }
+  
+  ga('send', 'event', 'Favourites', 'add/remove favourite');
+  
 }
 
 function saveFavourites() {
