@@ -37,7 +37,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1506076781748317317">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1506095542033805198">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -166,6 +166,19 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         
       </li>
       
+      <li class="favourites-button" style="display: none;">
+        
+        <a href="/favourites/">
+          <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="favourite-icon" fill-rule="nonzero" fill="#000000">
+                <path d="M13.0386151,20.8219726 L12.9040261,20.9350944 C12.6211963,21.1331497 12.3588301,21.2446972 11.9980813,21.2446972 C11.6132404,21.2446972 11.2276816,21.0922097 10.9575475,20.8219726 L3.34941589,13.1895079 C-0.494399029,9.34424701 -1.06833764,4.91656464 1.82708606,2.04662894 C4.53551339,-0.650273515 8.93417624,-0.650273515 11.6317027,2.04826765 C11.7590985,2.17571145 11.8811874,2.30717503 11.9979508,2.44245074 C12.113494,2.308583 12.2340705,2.17873137 12.3595798,2.05318363 C15.0576613,-0.683574661 19.4613678,-0.683574661 22.1921828,2.04826765 C25.0663528,4.92351884 24.4858536,9.34861925 20.6472524,13.189002 L13.0386151,20.8219726 Z" id="heart"></path>
+              </g>
+            </g>
+          </svg>
+          Favoritos
+        </a>
+      </li>
     </ul>
   </nav>
   
@@ -209,6 +222,14 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         
         
         
+        
+        
+        
+        
+        
+        
+        
+        
         <li><a href="/places/zones/">Zonas</a></li>
         
         
@@ -227,17 +248,22 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
       </ul>
     </nav>
   </div>
-
+  
   <div class="search-filter" style="display: none;">
     <p>
       <input type="search" name="search" placeholder="Search" />
     </p>
   </div>
+
+  <div class="favourites-button" style="display: none;">
+    
+    <a href="/favourites/"><img src="/assets/favourite-true-dark.svg"> Favoritos</a>
+  </div>
   
 </header>
 
 <div class="page" id="places">
-
+  
 
 
 
@@ -340,7 +366,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="43" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-dos-bicos-thumb.jpg);">
     <a href="/places/casa-dos-bicos/">
       <span class="place-number">43</span>
@@ -376,6 +402,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Mandada construir por Brás de Albuquerque, filho do primeiro Vice-Rei da Índia, entre 1521 e 1523, este edifício é conhecido pela fachada singular revestida por uma malha de “pontas de diamante”, designadas de forma comum por “bicos”, inspirada em modelos renascentistas italianos. O terramoto de 1755 deixou a casa bastante degradada, mais tarde depois de uma reconstrução parcial, começou a albergar um comerciante de bacalhau, ligação que perdurou até ao século XX. Em 1983, por ocasião da XVII Exposição Europeia de Artes, Ciência e Cultura, o projecto de Daniel Santa-Rita recupera a volumetria global e propõe, a partir de documentação histórica, um ensaio sobre a memória daquilo que havia desaparecido. Sujeita a obras de recuperação entre 2008 e 2012, alberga hoje a sede da Fundação José Saramago e o núcleo arqueológico da Casa dos Bicos.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -394,7 +422,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="50" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/igreja-sagrado-coracao-de-lisboa-thumb.jpg);">
     <a href="/places/igreja-sagrado-coracao-de-lisboa/">
       <span class="place-number">50</span>
@@ -424,6 +452,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Integrada num grande complexo paroquial, esta igreja passa despercebida mesmo ao cidadão mais atento, apesar da rua que a atravessa. Rompendo com a tradição religiosa, Nuno Portas e Nuno Teotónio Pereira recuperam o modelo de igreja romana primitiva, reforçando a relação entre o espaço religioso e a comunidade envolvente, levada ao limite pelo carácter despojado e urbano que o betão aparente lhe confere. Refinadamente trabalhada em termos de espaço, detalhes, e luz, esta igreja é surpreendente para quem entra no seu interior e se depara com a sua volumétrica monumental. Em 1975 ganhou o Prémio Valmor e é Monumento Nacional desde 2010.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(50)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(50)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -470,7 +500,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="71" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-museu-dr-anastacio-goncalves-thumb.jpg);">
     <a href="/places/casa-museu-dr-anastacio-goncalves/">
       <span class="place-number">71</span>
@@ -500,6 +530,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Projecto do arquitecto Norte Júnior datado de 1904/05, a casa foi mandada construir pelo pintor José Malhoa para sua habitação e atelier de trabalho. A primeira casa-de-artista da capital, Prémio Valmor em 1905, integrava-se urbanisticamente no plano de crescimento da cidade de Lisboa, e é um exemplo relevante da nossa arquitectura no século XIX. Em 1932, a “Casa-Malhoa” é adquirida pelo Dr. Anastácio Gonçalves e é onde este vive e organiza a sua colecção até 1965, data da sua morte. Abriu ao público em 1980 como Casa-Museu, e em 1996 foram feitas obras de ampliação e beneficiação, em que anexou ao edifício original uma moradia contígua.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(71)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(71)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -524,7 +556,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="81" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-nacional-do-azulejo-thumb.jpg);">
     <a href="/places/museu-nacional-do-azulejo/">
       <span class="place-number">81</span>
@@ -563,6 +595,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         A história do Azulejo em Portugal desde finais do século XV até aos nossos dias, vive no antigo Convento da Madre Deus, fundado em 1509 pela rainha D. Leonor. O convento foi sempre alvo da melhor atenção da Casa Real, tendo sido intervencionado ao longo dos séculos. A igreja, de 1550, tornou-se, após as intervenções do séc. XVII e XVIII, num dos mais notáveis exemplares do gosto decorativo do barroco em Portugal.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(81)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(81)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -665,7 +699,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="32" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/teatro-d-maria-ii-thumb.jpg);">
     <a href="/places/teatro-d-maria-ii/">
       <span class="place-number">32</span>
@@ -695,6 +729,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Que este espaço “contribua para a civilização e aperfeiçoamento moral da nação portuguesa”. São palavras de Almeida Garrett, que idealizou este lugar de criação e o inaugurou a 13 de Abril de 1846, durante as comemorações do 27.º aniversário da rainha Maria II (1819-1853). Exemplo da arquitectura de estilo neoclássico, o projecto original é do arquitecto italiano Fortunato Lodi. Após a sua construção no século XIX, o Teatro foi alvo de várias intervenções, entre as quais uma reconstrução da autoria do arquitecto Rebelo de Andrade que recuperou o interior após um grave incêndio em 1964, reabrindo ao público em 1978.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(32)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(32)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -723,7 +759,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="44" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/campo-das-cebolas-thumb.jpg);">
     <a href="/places/campo-das-cebolas/">
       <span class="place-number">44</span>
@@ -756,6 +792,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         A Praça das Portas do Mar, englobando o lugar do actual Campo das Cebolas e o lugar da antiga Ribeira Velha, junto ao Terreiro do Paço, constitui-se como uma oportunidade para repensar a relação entre a cidade de Lisboa e o rio Tejo. A estratégia da intervenção passa por criar um grande vazio — uma limpeza que permita perceber que a cidade antiga chegava à linha da muralha, onde actualmente se encontra a Casa dos Bicos —, com uma ligeira pendente que se voltará para a encosta da Sé e do Castelo. No lado oposto, junto à avenida, surge uma zona plana, que se relaciona com o rio. Por baixo desta praça insere-se um estacionamento com cerca de 210 lugares que se encaixa no espaço entre a antiga praia e o muro do primitivo cais do Ver-o-Peso.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(44)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(44)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -790,7 +828,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="59" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/cemiterio-dos-prazeres-thumb.jpg);">
     <a href="/places/cemiterio-dos-prazeres/">
       <span class="place-number">59</span>
@@ -820,6 +858,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Expoente do período romântico em Portugal, este cemitério alberga as sepulturas de ilustres personalidades da história do país. Como um museu a céu aberto, trata-se de um repositório de importantes elementos no que se refere à história contemporânea portuguesa, à arquitectura, ao urbanismo, à escultura e às diferentes abordagens, ao longo dos tempos, perante a morte. Num ambiente pautado pela serenidade dos imponentes ciprestes, percorrer este espaço é conhecer parte da história documentada nos seus inúmeros jazigos. A visita passa pela observação dos vários jazigos, com destaque para a visita ao interior do Jazigo Palmela, o maior jazigo particular da Europa.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(59)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(59)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -856,7 +896,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="75" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/centro-ismaili-thumb.jpg);">
     <a href="/places/centro-ismaili/">
       <span class="place-number">75</span>
@@ -886,6 +926,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         O Centro Ismaili, em Lisboa, estabelece pela primeira vez na Europa Continental um local em que os espaços de reunião dos Muçulmanos Ismailis complementam as instalações de uma rede internacional de instituições de desenvolvimento social, cultural e económico que servem pessoas de todas as fés, contextos e origens. Construído em torno de uma série de pátios, os seus edifícios combinam salas multiusos e áreas abertas, destinadas a funções sociais e encontros de carácter cultural e formativo. Este projecto, um raro exemplo de arquitectura de inspiração islâmica no nosso país, inspira-se na geometria da tradição muçulmana aliando uma técnica construtiva contemporânea a materiais locais.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(75)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(75)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -1020,7 +1062,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="42" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-de-lisboa-teatro-romano-thumb.jpg);">
     <a href="/places/museu-de-lisboa-teatro-romano/">
       <span class="place-number">42</span>
@@ -1059,13 +1101,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Situado na colina do Castelo, visitar este espaço proporciona uma viagem no tempo até ao início do século I d.C.. A actividade do museu centra-se na descoberta e compreensão das ruínas do Teatro Romano que foi abandonado no século IV d.C., e descoberto após o terramoto de 1755 durante a reconstrução pombalina. Já no século XXI, foi criado um pequeno núcleo museológico que entretanto se expandiu, integrando em 2015 o Museu de Lisboa, com um âmbito mais alargado. Ao longo do percurso museológico, que começa com uma vista surpreendente pela cidade, a viagem descendente vai revelando as ruínas romanas e outros espaços apropriados pelo próprio museu como, um edifício do século XVII e um grande espaço industrial dos finais do séc. XIX.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(42)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(42)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="43" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-dos-bicos-thumb.jpg);">
     <a href="/places/casa-dos-bicos/">
       <span class="place-number">43</span>
@@ -1101,6 +1145,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Mandada construir por Brás de Albuquerque, filho do primeiro Vice-Rei da Índia, entre 1521 e 1523, este edifício é conhecido pela fachada singular revestida por uma malha de “pontas de diamante”, designadas de forma comum por “bicos”, inspirada em modelos renascentistas italianos. O terramoto de 1755 deixou a casa bastante degradada, mais tarde depois de uma reconstrução parcial, começou a albergar um comerciante de bacalhau, ligação que perdurou até ao século XX. Em 1983, por ocasião da XVII Exposição Europeia de Artes, Ciência e Cultura, o projecto de Daniel Santa-Rita recupera a volumetria global e propõe, a partir de documentação histórica, um ensaio sobre a memória daquilo que havia desaparecido. Sujeita a obras de recuperação entre 2008 e 2012, alberga hoje a sede da Fundação José Saramago e o núcleo arqueológico da Casa dos Bicos.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -1248,7 +1294,8 @@ function filterPlaces() {
 	if (searchInput.val().length > 0) {
 		filter(searchInput.val(), false, false);
 	}
-	checkListHeaders()
+	checkListHeaders();
+	loadFavourites();
 }
 
 $(document).ready(function () {
@@ -1312,14 +1359,11 @@ $(document).ready(function () {
         </ul>
         
         
-        <p class="contact-link"><a href="mailto:joana.salvado@trienaldelisboa.com">Se quer ser um parceiro, diga-nos onde vamos beber café: joana.salvado@trienaldelisboa.com</a></p>
+        <p class="contact-link">Se quer ser um parceiro, diga-nos onde vamos beber café: <br><a href="mailto:joana.salvado@trienaldelisboa.com">joana.salvado@trienaldelisboa.com</a></p>
         
         
-        <p class="contact-link"><a href="mailto:openhouselisboa@trienaldelisboa.com">Se for um arquitecto, provoque-nos</a></p>
+        <p class="contact-link">Se for um arquitecto, provoque-nos: <br><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
-        
-        
-        <p class="contact-link" id="email"><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
         
         
@@ -1388,9 +1432,26 @@ $(document).ready(function () {
         });
         
       });
+      
+    </script>
+    <script src="/assets/js/favourites.js"></script>
+    <script>
+
+      $(function() {
+        if (localStorageSupported()) {
+          loadFavourites();
+          showFavouriteButtons();
+        }
+        
+      })
+
     </script>
     
 
+    <script>
+      var siteYear = 2017;
+    </script>
+    
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

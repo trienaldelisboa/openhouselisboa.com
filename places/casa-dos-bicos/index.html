@@ -39,7 +39,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1506076781748317317">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1506095542033805198">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -168,6 +168,19 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         
       </li>
       
+      <li class="favourites-button" style="display: none;">
+        
+        <a href="/favourites/">
+          <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="favourite-icon" fill-rule="nonzero" fill="#000000">
+                <path d="M13.0386151,20.8219726 L12.9040261,20.9350944 C12.6211963,21.1331497 12.3588301,21.2446972 11.9980813,21.2446972 C11.6132404,21.2446972 11.2276816,21.0922097 10.9575475,20.8219726 L3.34941589,13.1895079 C-0.494399029,9.34424701 -1.06833764,4.91656464 1.82708606,2.04662894 C4.53551339,-0.650273515 8.93417624,-0.650273515 11.6317027,2.04826765 C11.7590985,2.17571145 11.8811874,2.30717503 11.9979508,2.44245074 C12.113494,2.308583 12.2340705,2.17873137 12.3595798,2.05318363 C15.0576613,-0.683574661 19.4613678,-0.683574661 22.1921828,2.04826765 C25.0663528,4.92351884 24.4858536,9.34861925 20.6472524,13.189002 L13.0386151,20.8219726 Z" id="heart"></path>
+              </g>
+            </g>
+          </svg>
+          Favoritos
+        </a>
+      </li>
     </ul>
   </nav>
   
@@ -181,7 +194,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 
 
 
-<article class="page place" role="article">
+<article class="page place" role="article" data-number="43">
 
   <header class="place-header">
   
@@ -190,6 +203,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
       <h2 class="place-name">Fundação José Saramago - Casa dos Bicos</h2>
       <p>Francisco de Arruda, 1523</p>
       <p>Manuel Vicente e José Daniel Santa-Rita, 1981 / João Santa-Rita, 2011</p>
+      <button class="favourite-button add-favourite" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-false-dark.svg"> <span>Adicionar aos Favoritos</span></button>
+      <button class="favourite-button remove-favourite" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-true-dark.svg"> <span>Remover dos Favoritos</span></button>
     </div>
     
     <div class="place-header-image">
@@ -412,11 +427,11 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
 </article>
 
 <script>
-  $(document).ready(function() {
+  $(function() {
     $('.tooltip').click(function(){
       $(this).toggleClass("tooltip-hidden");
     });
-  });
+  })
 </script>
 
     </div>
@@ -452,14 +467,11 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         </ul>
         
         
-        <p class="contact-link"><a href="mailto:joana.salvado@trienaldelisboa.com">Se quer ser um parceiro, diga-nos onde vamos beber café: joana.salvado@trienaldelisboa.com</a></p>
+        <p class="contact-link">Se quer ser um parceiro, diga-nos onde vamos beber café: <br><a href="mailto:joana.salvado@trienaldelisboa.com">joana.salvado@trienaldelisboa.com</a></p>
         
         
-        <p class="contact-link"><a href="mailto:openhouselisboa@trienaldelisboa.com">Se for um arquitecto, provoque-nos</a></p>
+        <p class="contact-link">Se for um arquitecto, provoque-nos: <br><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
-        
-        
-        <p class="contact-link" id="email"><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
         
         
@@ -528,9 +540,26 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         });
         
       });
+      
+    </script>
+    <script src="/assets/js/favourites.js"></script>
+    <script>
+
+      $(function() {
+        if (localStorageSupported()) {
+          loadFavourites();
+          showFavouriteButtons();
+        }
+        
+      })
+
     </script>
     
 
+    <script>
+      var siteYear = 2017;
+    </script>
+    
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

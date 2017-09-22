@@ -37,7 +37,7 @@
     
     
     
-    <link rel="stylesheet" href="/assets/css/style.min.css?1506076781748317317">
+    <link rel="stylesheet" href="/assets/css/style.min.css?1506095542033805198">
     <link rel="shortcut icon" href="/assets/site-icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/assets/site-icons/favicon-512.png">
     <meta name="apple-mobile-web-app-title" content="Open House">
@@ -166,6 +166,19 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         
       </li>
       
+      <li class="favourites-button" style="display: none;">
+        
+        <a href="/en/favourites/">
+          <svg width="24px" height="22px" viewBox="0 0 24 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+              <g id="favourite-icon" fill-rule="nonzero" fill="#000000">
+                <path d="M13.0386151,20.8219726 L12.9040261,20.9350944 C12.6211963,21.1331497 12.3588301,21.2446972 11.9980813,21.2446972 C11.6132404,21.2446972 11.2276816,21.0922097 10.9575475,20.8219726 L3.34941589,13.1895079 C-0.494399029,9.34424701 -1.06833764,4.91656464 1.82708606,2.04662894 C4.53551339,-0.650273515 8.93417624,-0.650273515 11.6317027,2.04826765 C11.7590985,2.17571145 11.8811874,2.30717503 11.9979508,2.44245074 C12.113494,2.308583 12.2340705,2.17873137 12.3595798,2.05318363 C15.0576613,-0.683574661 19.4613678,-0.683574661 22.1921828,2.04826765 C25.0663528,4.92351884 24.4858536,9.34861925 20.6472524,13.189002 L13.0386151,20.8219726 Z" id="heart"></path>
+              </g>
+            </g>
+          </svg>
+          Favourites
+        </a>
+      </li>
     </ul>
   </nav>
   
@@ -209,6 +222,12 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         
         
         
+        
+        
+        
+        
+        
+        
         <li><a class="selected-taxonomy" href="/en/places/zones/">Zones</a></li>
         
         
@@ -227,17 +246,22 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
       </ul>
     </nav>
   </div>
-
+  
   <div class="search-filter" style="display: none;">
     <p>
       <input type="search" name="search" placeholder="Search" />
     </p>
   </div>
+
+  <div class="favourites-button" style="display: none;">
+    
+    <a href="/en/favourites/"><img src="/assets/favourite-true-dark.svg"> Favourites</a>
+  </div>
   
 </header>
 
 <div class="page" id="places">
-
+  
 
 
 
@@ -250,13 +274,13 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
   
   <section class="tag-section" data-total="11">
     <header>
-      <h3 id="belem-ajuda">Belém e Ajuda</h3>
+      <h3 id="belem-ajuda">Belém and Ajuda</h3>
     </header>
     <ul>
 
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="1" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/fundacao-champalimaud-thumb.jpg);">
     <a href="/en/places/fundacao-champalimaud/">
       <span class="place-number">1</span>
@@ -286,13 +310,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         This research centre is a prime example of Lisbon’s renewal and expansion. A centre of excellence in biomedical research, it reopened to the public an important waterfront zone in Pedrouços, which neighbours Belém. The complex embraces the Tagus estuary, occupying a plot of 65,000 square metres and consisting of three main areas: the main building housing an oncological clinic and research laboratories for cancer and the neurosciences; the public building (with an auditorium, the Darwin restaurant and an exhibition centre); and the open-air amphitheatre.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(1)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(1)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="2" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/altis-belem-hotel-spa-thumb.jpg);">
     <a href="/en/places/altis-belem-hotel-spa/">
       <span class="place-number">2</span>
@@ -322,13 +348,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Designed with the express aim of building a strong relationship with and respect for its natural and built surroundings, this hotel is located right on the riverfront among the main monuments to and of the period of the Discoveries. Open to the waterfront walkway, its main public areas are concentrated on the ground floor. The main volume in glass, which becomes a huge box of light at night, reflects the scale of the nearby dock.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(2)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(2)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="3" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/centro-cultural-de-belem-thumb.jpg);">
     <a href="/en/places/centro-cultural-de-belem/">
       <span class="place-number">3</span>
@@ -358,13 +386,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         Approaching the ripe age of 25, the Belém Cultural Centre (CCB) remains a reference building in the city of Lisbon. Since its inauguration, it has been the venue of countless performances, exhibitions, conferences and other events. Guided tours focus on the Great Auditorium and the new technical equipment that now means this iconic space is also a cinema theatre. The CCB has a built area of 97,000 square metres on a plot of some six hectares; the complex is divided up by two internal walkways, with the central and unifying José Saramago path creating continuity with Praça do Império square.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(3)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(3)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="4" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-nacional-dos-coches-thumb.jpg);">
     <a href="/en/places/museu-nacional-dos-coches/">
       <span class="place-number">4</span>
@@ -394,13 +424,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         A unique collection in a unique museum that has been successfully integrated into the surrounding public space areas of Praça do Império, Jardim de Belém and Jardim Afonso de Albuquerque.  The National Coach Museum building itself is not just a cultural venue, but also a public space. Two separate buildings – one white and opaque, the other made of glass and exposed concrete – house the programme and define new exterior spaces. A large nave stands out as the main exhibition area, and a public walk/cycle path leading to the River Tagus is yet to be built. The street is extended by and merges and interacts with the museum.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(4)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(4)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="5" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/maat-central-tejo-thumb.jpg);">
     <a href="/en/places/maat-central-tejo/">
       <span class="place-number">5</span>
@@ -430,13 +462,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         A unique building in the context of the architectural heritage of Lisbon, the Central Tejo power plant is one of the most beautiful examples of early 20th-century industrial architecture in Portugal. Its structure adopted the iron architectural style common in Western Europe at the time, and was given a solid brick cladding, which configures and decorates the façade in artistic styles ranging from Art Nouveau to Classicism. Today it is a museum that documents the history of electricity, with its original machinery totally intact. It also serves as a large exhibition space linked to its new neighbouring building.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(5)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(5)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="6" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/maat-edificio-novo-thumb.jpg);">
     <a href="/en/places/maat-edificio-novo/">
       <span class="place-number">6</span>
@@ -466,13 +500,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         This iconic project has very rapidly changed the Lisbon waterfront. Linked to the Central Tejo (see above) through a garden designed by landscape architect Vladimir Djurovic, the new Museum for Art, Architecture and Technology houses four exhibition spaces: the Oval Gallery, Main Gallery, Video Room and Project Room, totalling 3,000 square metres. The diversity of its programmes and spaces has made it an essential element in the cultural life of the city, with its walkable roof providing an ideal spot to take in the views of the Tagus and the opposite bank.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(6)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(6)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="7" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-das-galeotas-thumb.jpg);">
     <a href="/en/places/casa-das-galeotas/">
       <span class="place-number">7</span>
@@ -502,13 +538,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         This building is located near the river between Rua da Junqueira and Avenida da Índia, on a practically flat site facing land reclaimed from the river in the late 19th/early 20th century. Its occupation by two distinct entities – headquarters of the Casa da América Latina and the UCCLA (Union of Portuguese Speaking Capital Cities) – has resulted in a specific design programme that includes a cafeteria and an exhibition area with an auditorium. The remodelling project has unified a group of diverse neighbouring structures that expanded over time: a warehouse from the 18th century, a 19th-century building and another structure from the early 20th century.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(7)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(7)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="8" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacio-nacional-da-ajuda-thumb.jpg);">
     <a href="/en/places/palacio-nacional-da-ajuda/">
       <span class="place-number">8</span>
@@ -541,13 +579,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         A Neoclassic building from the early 19th century, it was designed as a Royal Palace following the destruction of the former palace at present-day Praça do Comércio in the earthquake of 1755. For a number of reasons only half of the original design was built. The palace served as the official residence of the Portuguese royal family from the reign of Luís I to the end of the monarchy in 1910. Opened to the public as a national monument in 1968, it maintains the original layout of the royal family quarters and decoration of the day, as it awaits proposals for completion of the original project.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(8)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(8)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="9" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/escola-francisco-arruda-thumb.jpg);">
     <a href="/en/places/escola-francisco-arruda/">
       <span class="place-number">9</span>
@@ -580,13 +620,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         “If you don’t have a village, child, go in search of one!” This quotation from João dos Santos served as inspiration for the remodelling and extension of this primary school. The original structures, built around a courtyard, looked as if they were from different periods, creating a village of its own. The new design built discreetly on that idea; the various construction phases are noticeable but the elements are in harmony with each other and respond uniformly to the complex’s differing needs and stages. This school building won the Secil Prize in 2012.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(9)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(9)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="10" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-arriaga-thumb.jpg);">
     <a href="/en/places/apartamento-arriaga/">
       <span class="place-number">10</span>
@@ -616,13 +658,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         The designers for this project had to work with a labyrinthine apartment that was highly fragmented, lacked proportion and suffered from poor lighting. Their design focused on understanding what was important and making the respective choices, recycling the rest. A glass and metal curtain wall now opens onto a patio and the spacious living room has a raised ceiling. The old internal walls have given way to mezzanine floors, original furnishings have become decorative architectural elements and the once unnoticeable solid stone elements have been used to create a patio.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(10)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(10)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="11" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/gare-maritima-rocha-conde-obidos-thumb.jpg);">
     <a href="/en/places/gare-maritima-rocha-conde-obidos/">
       <span class="place-number">11</span>
@@ -652,6 +696,8 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         This cruise terminal building is dominated by a large square-plan hall with a meticulous lighting design, which combines zenithal and lateral lights. It is a good example of how architects and engineers can and should work together. It also features two triptychs by Almada Negreiros, depicting aspects of everyday life in the vicinity of the dock – from an evocation of saltimbanques to Sunday walks along the river and the construction of the terminal buildings and to farewell scenes depicting the sadness of those leaving Lisbon and anxiety of those left. Both in this and the later Gare Marítima de Alcântara building, the main spaces are on the first floor, as it was from there that luggage was loaded on to the ships and the customs offices were located. The first steam liner to moor at the dock was the “North King”, belonging to a Portuguese-Panamanian company, on 19 June 1948. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(11)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(11)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -826,7 +872,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
   
   <section class="tag-section" data-total="13">
     <header>
-      <h3 id="estrela-cais-do-sodre">Estrela e Cais do Sodré</h3>
+      <h3 id="estrela-cais-do-sodre">Estrela and Cais do Sodré</h3>
     </header>
     <ul>
 
@@ -854,7 +900,7 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="12" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-da-marioneta-thumb.jpg);">
     <a href="/en/places/museu-da-marioneta/">
       <span class="place-number">12</span>
@@ -887,13 +933,15 @@ window.grunticon=function(e){if(e&&3===e.length){var t=window,n=!(!t.document.cr
         This convent is a building of indisputable historical and architectural value, first and foremost its cloister forming an irregular square. Founded in 1653 and rebuilt after the earthquake of 1755, the convent was occupied by nuns up until the dissolution of the religious orders in Portugal. It has served as a school, a polytechnic college, a cinema and theatre, and the headquarters of a philharmonic band. Today, after renovation carried out by its owner, Lisbon City Council, it is home to the Puppet Museum, a restaurant, housing and local community groups, and plays a central role in the life of the Madragoa neighbourhood.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(12)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(12)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="13" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-na-estrela-thumb.jpg);">
     <a href="/en/places/apartamento-na-estrela/">
       <span class="place-number">13</span>
@@ -925,13 +973,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(13)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(13)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="14" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-na-calcada-da-estrela-thumb.jpg);">
     <a href="/en/places/apartamento-na-calcada-da-estrela/">
       <span class="place-number">14</span>
@@ -964,13 +1014,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This apartment was very compartmentalised, making it unsuited to contemporary living. The new design strikes a delicate balance between conservation and the recovery of the original essence, introducing elements that respond to modern demands. The living room is now the nerve centre, connecting to all remaining areas: kitchen, bedrooms and bathrooms. The central space also incorporates the interior yard space, opening up onto a new patio that includes a small swimming pool. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(14)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(14)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="15" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/atelier-museu-julio-pomar-thumb.jpg);">
     <a href="/en/places/atelier-museu-julio-pomar/">
       <span class="place-number">15</span>
@@ -1000,13 +1052,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Originally meant as a studio for the artist, Júlio Pomar, this space is now a museum promoting the painter’s work in its consistent and regular programmes. It is now part of Lisbon’s public-owned cultural spaces managed by the municipal company EGEAC. What was once a warehouse was renovated with great simplicity and mastery to conserve the essence of the original building – the structural walls and the roof. Highlights of the intervention are the new access patio with a ramp, a mezzanine floor (in the central void) that links the two floors, and the restoration of the roof and wooden rafter structure.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(15)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(15)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="16" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/atelier-reabilitado-em-madeira-terra-e-cal-thumb.jpg);">
     <a href="/en/places/atelier-reabilitado-em-madeira-terra-e-cal/">
       <span class="place-number">16</span>
@@ -1039,13 +1093,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This studio is like a real-life model where the architects also became artisans, experimenting with and testing building techniques using raw natural materials, such as wood, earth and lime. It is a space of reflection and experimentation that has become a prototype for new renovation projects in the city and a laboratory for the continued use of rapidly disappearing building materials and methods, which have been employed here to meet contemporary challenges, such as environmental impact and spatial comfort.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(16)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(16)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="17" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-zero-thumb.jpg);">
     <a href="/en/places/casa-zero/">
       <span class="place-number">17</span>
@@ -1075,13 +1131,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         An unusual project that unites two spaces that normally don’t mix so well with each other – essentially a garage that has been turned into a garage/house. It consists of one single space divided into two parts – one for the car, the other for living – through a central element that houses the entrance, a bedroom and a small bathroom.  This element functions as a solid but permeable body that enables transition between the two ambiences. The house space meticulously orders the various human activities: sleeping, cooking, eating and living.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(17)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(17)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="18" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/rua-das-gaivotas-6-teatro-praga-thumb.jpg);">
     <a href="/en/places/rua-das-gaivotas-6-teatro-praga/">
       <span class="place-number">18</span>
@@ -1111,13 +1169,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Known by the name Escola das Gaivotas, for having been a primary school for some 50 years, the former Palácio Alarcão now serves new purposes. The main floors of the former school building are now occupied by the Gaivotas Creative Hub, and the Teatro Praga has installed itself in the palace building with the street number 6, taking on the name Rua das Gaivotas 6, a venue for visual art shows, performance art, conferences, literature, cinema and workshops.  The aim of the remodelling project was to create a space of continuity with the building it is part of, reflecting an overriding desire for adaptation, improvisation and interaction with the city. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(18)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(18)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="19" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacio-almada-carvalhais-thumb.jpg);">
     <a href="/en/places/palacio-almada-carvalhais/">
       <span class="place-number">19</span>
@@ -1150,13 +1210,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Many will already know the vaulted tunnel-like space in this building on Largo do Conde Barão (it was formerly the entrance to the well-known nightclub B.leza). But few will be aware that the building has been listed as a National Monument since 1919, and is one of the city’s rare examples of civil architecture from the 16th century. Commissioned by Rui Fernandes de Almada around 1545, the palatial building was partly destroyed in the earthquake of 1755 and underwent significant reconstruction work in the late 18th century. The new intervention was aimed at recovering the former palace’s central nucleus and linking it to a new extension that is part of a new garden to be created in the courtyard.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(19)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(19)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="20" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/nova-sede-edp-thumb.jpg);">
     <a href="/en/places/nova-sede-edp/">
       <span class="place-number">20</span>
@@ -1186,13 +1248,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This emblematic building shows how there is a place for new construction in Lisbon that can also change, improve and renew the city. The very history of Lisbon and this area of land reclaimed from the Tagus dictated a layout of structures that are perpendicular to the river and the creation of a square as a public space. The external aspect of the built structures changes whether in full light or half or full shade, and the work spaces are sheltered with patios on the various floors, with the public services part open to the horizontal square.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(20)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(20)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="21" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/second-home-lisboa-thumb.jpg);">
     <a href="/en/places/second-home-lisboa/">
       <span class="place-number">21</span>
@@ -1222,13 +1286,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         A communal workspace full of plants and small trees. This coworking project by Sam Aldenton and Rohan Silva, already established in various locations in London, is an offshoot of the redevelopment of the historic Mercado da Ribeira market hall, giving the space a new use and offering new synergies and ways of working. The greenery in the interior contrasts with the iron beams and rafters of the building’s original structure, and the use of radiant floor heating and thermal and acoustic insulation has made it possible to reduce energy consumption and create exceptional conditions of comfort.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(21)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(21)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="22" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/banhos-sao-paulo-thumb.jpg);">
     <a href="/en/places/banhos-sao-paulo/">
       <span class="place-number">22</span>
@@ -1261,13 +1327,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The old Neoclassical building for the São Paulo baths, built over a source of chlorinated and sulphur-rich waters, was commissioned by the Santa Casa da Misericórdia de Lisboa in 1850. Today it is listed as a Building of Public Interest. Extensive remodelling work was begun in 1991. The central patio was maintained as the dominant space and the original chimneys were restored. Contrasting with the austere Neoclassical façade, the building’s interior is full of formal exuberance and colour. Now the headquarters of the Association of Architects, the building maintains its original name in spite of the remodelling project and change of use.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(22)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(22)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="23" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/atelier-oporto-thumb.jpg);">
     <a href="/en/places/atelier-oporto/">
       <span class="place-number">23</span>
@@ -1294,13 +1362,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         During the day, this former home to a merchant sailor association, which has been kept in its original state with its murals, service counters, ring buoys and secret passageways, serves as the studio of the artist Alexandre Estrela. But now and again, at night, this “port” becomes a safe haven for cult sessions of experimental films and videos produced by national and international artists. The unconventional screenings are part of a rigorous programme outlined by Alexandre Estrela and the graphic designer Ana Baliza. Having begun in 2007, the cult film sessions have since built up a loyal group of hard-core fans.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(23)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(23)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="24" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/hotel-verride-thumb.jpg);">
     <a href="/en/places/hotel-verride/">
       <span class="place-number">24</span>
@@ -1333,6 +1403,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Protected by the statue of Adamastor, and in a privileged location on the square above the Santa Catarina belvedere, this palace has finally been remodelled and converted into a luxury hotel. To maintain the palatial quality of the surroundings, guests can choose between booking the 18 rooms individually or, for even more luxury, entire floors.  The hotel has a restaurant that can be directly accessed from Travessa da Portuguesa which uses the original vaulted ceilings and masonry arches to excellent effect. There is also a surprising breakfast room clad in azulejo tiles. It faces east and extends onto the outside terrace that ends in a pool overlooking the Bica neighbourhood and the River Tagus. At the top there is a small lookout point that provides 360º views over Lisbon, but with restricted access.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(24)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(24)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -1481,7 +1553,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="14">
     <header>
-      <h3 id="bairro-alto-baixa-chiado">Bairro Alto e Baixa-Chiado</h3>
+      <h3 id="bairro-alto-baixa-chiado">Bairro Alto and Baixa-Chiado</h3>
     </header>
     <ul>
 
@@ -1535,7 +1607,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="25" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/teatro-do-bairro-thumb.jpg);">
     <a href="/en/places/teatro-do-bairro/">
       <span class="place-number">25</span>
@@ -1565,13 +1637,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This black box in the heart of Bairro Alto has established itself as an essential stop on the Lisbon nightlife circuit, not just as a theatre but also as a bar and entertainment spot. The space was formally the printing room of this 20th-century concrete industrial building, where the Lisbon newspaper Diário Popular (1942-1992) was  printed. The inherent constraints and possibilities of an old printing house guided the conversion to a 110-seat theatre, 80 of which are retractable seating with the rest in fixed boxes. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(25)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(25)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="26" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/mercado-do-bairro-alto-thumb.jpg);">
     <a href="/en/places/mercado-do-bairro-alto/">
       <span class="place-number">26</span>
@@ -1601,13 +1675,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         At the heart of an historic neighbourhood, this traditional market building from the 1960s underwent extensive remodelling work to a design by Melo Carvalho in 1991, which saw the addition of one more floor. The commercial space was altered with the introduction of proper shops to replace the former stalls. The most recent intervention by the Fundação Ricardo Espírito Santo Silva is designed for the installation of the Arts and Crafts Network in the space.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(26)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(26)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="27" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/igreja-de-sao-roque-thumb.jpg);">
     <a href="/en/places/igreja-de-sao-roque/">
       <span class="place-number">27</span>
@@ -1637,13 +1713,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The guided tours of this church dedicated to St. Roch include a visit behind the scenes and a walk over the roof of this iconic building. Built on the site of an old Manueline chapel, it is the work of the architect Afonso Álvares, but the roof and old Mannerist façade were designed by the Italian Filippo Terzi. A prototype for Portuguese Jesuit churches, it belonged to the Society of Jesus before it was donated to the Santa Casa da Misericórdia charity in 1768 after the Jesuits were expelled from Portugal. Featuring a single nave with interlinked side chapels, the church’s interior is richly decorated in a Baroque style: gilt wood carving, paintings azulejo tiles and marble elements. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(27)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(27)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="28" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/loja-claus-porto-thumb.jpg);">
     <a href="/en/places/loja-claus-porto/">
       <span class="place-number">28</span>
@@ -1673,13 +1751,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Claus Porto is a Portuguese toiletries brand whose 130-year history served as inspiration for the design of its first store in Lisbon. The intervention focused on conserving and restoring the existing structures. The old shop interior consisted of two spaces on different levels that were linked by a flight of stairs; both spaces could be accessed directly from outside from two different streets. The space opening onto Rua da Misericórdia was for many years a pharmacy, from which it inherited the wood-framed vitrines lining the walls and the ceiling decorated with white stucco featuring geometric and botanical designs.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(28)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(28)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="29" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-ao-chiado-thumb.jpg);">
     <a href="/en/places/apartamento-ao-chiado/">
       <span class="place-number">29</span>
@@ -1709,13 +1789,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The kitchen is where it all happens in this remodelled apartment. It serves as the entrance hall, living room and central space, providing access to the other rooms. This apartment in an old Pombaline building in the heart of Lisbon was used as an office space in the 1990s, this new project returning it to its original function. The number of rooms was changed and the space was adapted to contemporary living. Another peculiarity is the independent entrance to the apartment directly from Rua do Loreto via a staircase in Portuguese limestone leading to the first floor.      
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(29)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(29)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="30" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacio-chiado-thumb.jpg);">
     <a href="/en/places/palacio-chiado/">
       <span class="place-number">30</span>
@@ -1751,13 +1833,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The former Barão de Quintela palace now provides gastronomic delights over roughly 1,000 sq. m. Visitors can dine or snack in an ambience of decorated ceilings, murals, stained glass windows and grand marble staircases – reflecting the fact that this 18th-century palace was once home to prominent figures of the Portuguese aristocracy and served as a residence for General Junot during the French invasion in the Napoleonic wars. The new intervention added new flooring which conceals all the infrastructures, leaving the magnificent walls and ceilings untouched. Solid and effective, the intervention is also reversible in the sense that the palace can be returned to its original form. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(30)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(30)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="31" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/teatro-nacional-de-sao-carlos-thumb.jpg);">
     <a href="/en/places/teatro-nacional-de-sao-carlos/">
       <span class="place-number">31</span>
@@ -1787,13 +1871,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This visit will take you behind the scenes of Lisbon’s opera house, to areas normally not open to the public. The theatre’s interior, in a late Baroque style, which is acknowledged as a perfect example of theatre architecture, underwent a number of adaptations over the years. The auditorium itself features a flamboyant aristocratic décor, with ornamental elements by Giovanni Appianni and a ceiling painted by Manuel da Costa and Cirilo Wolkmar Machado. Listed as a National Monument in 1928, the building’s extraordinary value and architectural beauty, and its annual programming, have made the São Carlos opera house an inescapable institution in Portuguese cultural life.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(31)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(31)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="32" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/teatro-d-maria-ii-thumb.jpg);">
     <a href="/en/places/teatro-d-maria-ii/">
       <span class="place-number">32</span>
@@ -1823,13 +1909,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This National Theatre was built to “contribute to the civilisation and moral betterment of the Portuguese nation”, in the words of Almeida Garrett who idealised this creative space and inaugurated it on 13 April 1846 to mark the 27th birthday of Queen Maria II (1819-1853). Built in a Neoclassical style, the building’s original design was by the Italian architect Fortunato Lodi. Following its construction, the theatre underwent a number of renovation interventions, including an interior reconstruction project under the guidance of Rebelo de Andrade after a serious fire in 1964. It did not reopen until 1978.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(32)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(32)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="33" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/sede-do-banco-de-portugal-thumb.jpg);">
     <a href="/en/places/sede-do-banco-de-portugal/">
       <span class="place-number">33</span>
@@ -1865,13 +1953,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Set in the urban grid of the Baixa district, the Church of São Julião and the attached block were a product of the reconstruction project for the area after the earthquake of 1755. The whole block has belonged to Banco de Portugal since the 1930s, with the church having been converted to office space. After the remodelling and restoration work on the whole block the church is now a cultural space open to the community. It houses the new Money Museum, which displays its permanent collection in a number of nuclei using interactive technology, hosts other temporary exhibitions and is also home to the King Dinis Wall Interpretation Centre.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(33)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(33)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="34" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/pacos-do-concelho-thumb.jpg);">
     <a href="/en/places/pacos-do-concelho/">
       <span class="place-number">34</span>
@@ -1904,13 +1994,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         It was here that the Portuguese Republic was proclaimed on 5 October 1910, an event that will always be part of the history of this building. The original building, erected at the time of the post-earthquake reconstruction under Pombal, was totally destroyed in a fire in 1863. The current structure was built in the late 19th century, with contributions by diverse Portuguese artists. Another fire, in 1996, destroyed the upper floors, which have been restored in accordance with the original designs. For that restoration project a number of contemporary architects and artists were asked to participate, adding to the building’s acknowledged architectural and artistic value. The visit takes in the archive room, the main staircase and the belle étage with its allegorical representations of the city.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(34)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(34)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="35" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/supremo-tribunal-de-justica-thumb.jpg);">
     <a href="/en/places/supremo-tribunal-de-justica/">
       <span class="place-number">35</span>
@@ -1942,13 +2034,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(35)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(35)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="36" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/mude-thumb.jpg);">
     <a href="/en/places/mude/">
       <span class="place-number">36</span>
@@ -1987,13 +2081,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Occupying the former Banco Nacional Ultramarino premises in Rua Augusta since 2009, the Museum of Design and Fashion is currently undergoing renovation work. The “raw” state the building was left in when the museum moved in, which was maintained in the first remodelling intervention, remains its brand image. All ongoing alterations will be kept to a minimum and focus on functional issues, such as improving accessibility and fluid, safe circulation to and in the various zones of the museum, removing any architectural barriers for persons with disabilities.  As this is a tour of a construction site, it provides a unique opportunity to get to know the building.   
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(36)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(36)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="37" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/sede-milennium-bcp-thumb.jpg);">
     <a href="/en/places/sede-milennium-bcp/">
       <span class="place-number">37</span>
@@ -2023,13 +2119,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The foundation premises are part of a typical but renovated block in Lisbon’s Pombaline Baixa district and occupy a considerable amount of surface area. The Pombaline façade was maintained and recovered, as well as part of the supporting walls and the remarkable brickwork vaulted ceilings resting on stone pillars that define the ground floors of these buildings. The remodelling project showcases important archaeological finds on the site. The airwell space remains a defining element, with the addition of a translucent roof creating diverse visual links and bridges, and structuring the occupation and functioning of the building as a unit. The new architectural elements are visually discreet but also mark a clear distinction from the materials of the original building.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(37)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(37)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="38" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/percurso-pedonal-assistido-thumb.jpg);">
     <a href="/en/places/percurso-pedonal-assistido/">
       <span class="place-number">38</span>
@@ -2059,6 +2157,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Negotiating the hills and slopes of Lisbon – climbing uphill and going downhill – can be a veritable “cross-country” experience. For a long time now the city has used mechanical means to make certain urban itineraries easier. Awarded the FAD 2014 Prize, this pedestrian course connecting Lisbon’s Baixa district and its castle, brings together in one building the public lifts, private housing and the local Parish Council offices. The previous flooring was replaced by slabs of Lioz limestone with a matte honed finish, adding a level of comfort and becoming a leitmotif for the whole project. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(38)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(38)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -2179,7 +2279,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="10">
     <header>
-      <h3 id="castelo-graca">Castelo e Graça</h3>
+      <h3 id="castelo-graca">Castle and Graça</h3>
     </header>
     <ul>
 
@@ -2261,7 +2361,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="39" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-pascal-lobry-thumb.jpg);">
     <a href="/en/places/casa-pascal-lobry/">
       <span class="place-number">39</span>
@@ -2294,13 +2394,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Located in a “gaioleiro” building [unreinforced masonry buildings with flexible timber floors] close to the walls of Castelo de São Jorge, the remodelling design for this apartment was both surgical and insightful, while introducing profound alterations to the use of the spaces. The design was based on four relatively simple operations: a set of new elements in painted wood on the walls and ceilings that reorganize the dwelling; a door that was reintroduced to add new possible courses; walls clad in textured paper hand painted in varying colours; and the bathroom ceiling transformed into a skylight. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(39)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(39)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="40" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/atelier-calcada-do-correio-velho-e-porta-14-thumb.jpg);">
     <a href="/en/places/atelier-calcada-do-correio-velho-e-porta-14/">
       <span class="place-number">40</span>
@@ -2333,13 +2435,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         In the course of the renovation of this former shop/storeroom, now an architectural studio, an inscription was discovered: “Goods were placed here for the first time on 10 July 1799, signed T.C.” it reads. Part of the history of the rebuilding of Lisbon after the earthquake in 1755 is inscribed on the foundations of Pombaline buildings such as this one. The space is a testament to the solidity of those foundations, and the remodelling and restoration project sought to emphasise those qualities – highlighting the clarity of the space and construction. Sharing the same space, and visible from a shop window onto the street, is Porta 14, a project that showcases works of art and architecture.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(40)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(40)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="41" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-de-lisboa-santo-antonio-thumb.jpg);">
     <a href="/en/places/museu-de-lisboa-santo-antonio/">
       <span class="place-number">41</span>
@@ -2372,13 +2476,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The presence of a perforated metal panel revealing behind it the already existing entrance to the museum, reinforces the museum’s visibility in the context of the small square it shares with the church next door. Designed to conceal the infrastructural installations, this element is part of a recent intervention that doubled the museum’s space, creating for new exhibition potential. By making use of part of a neighbouring residential building, the identity of the place was redefined whilst maintaining the original geometry and removing decharacterising elements. The new design adds large-scale exhibition panels that emphasise the interior volumes and reinforces the use of original interior elements. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(41)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(41)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="42" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-de-lisboa-teatro-romano-thumb.jpg);">
     <a href="/en/places/museu-de-lisboa-teatro-romano/">
       <span class="place-number">42</span>
@@ -2417,13 +2523,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         A visit to this space located on the slope below the castle becomes a journey back in time to the early 1st century AD. The museum’s activities centre on the discovery and interpretation of the remains of the Roman Theatre, which was abandoned in the 4th century AD and rediscovered during the reconstruction work after the 1755 earthquake.  Fast forward to the 21st century and the creation of a small museological nucleus that has since grown and is now part of the Museum of Lisbon and its wider scope. Along the visitor course, which begins with a surprising tour of the city, the journey through time reveals the Roman ruins and other spaces taken under the museum’s wing, such as a 17th-century building and a large industrial space from the late 19th century.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(42)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(42)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="43" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-dos-bicos-thumb.jpg);">
     <a href="/en/places/casa-dos-bicos/">
       <span class="place-number">43</span>
@@ -2459,13 +2567,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Commissioned by Brás de Albuquerque, the son of the first Portuguese Viceroy of India, and built between 1521 and 1523, the Casa dos Bicos stands out for its unusual façade covered in “diamond-like spikes”, known by the popular term “bicos” [Portuguese for spikes or beaks]; the façade takes its inspiration from Italian Renaissance models.  The earthquake of 1755 did considerable damage to the building. Later, after partial reconstruction, it housed a salt cod trader’s warehouse, which remained there well into the 20th century. In 1983, on the occasion of the 17th European Exposition of Arts, Science and Culture, a renovation project by Daniel Santa-Rita restored the building’s original volume. However, it remained unfinished, a testament to the memory of what had since disappeared. Subjected to further renovation work from 2008 to 2012, Casa dos Bicos is now the headquarters of the Fundação José Saramago and home to the Casa dos Bicos archaeological nucleus.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(43)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="44" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/campo-das-cebolas-thumb.jpg);">
     <a href="/en/places/campo-das-cebolas/">
       <span class="place-number">44</span>
@@ -2498,13 +2608,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The Portas do Mar plaza, which includes the current Campo das Cebolas and the space known as Ribeira Velha, next to the Praça do Comércio buildings, is seen as an opportunity to rethink the relationship between the city and the River Tagus. The intervention strategy includes creating a large open space – an opening up that makes it clear that the old city went as far as the line of the ancient walls, where Casa dos Bicos now stands – with a slight inclination upwards to Cathedral slope and the castle. At the other end, next to the waterfront avenue, is a flat area that establishes a direct relationship with the river. Underneath the new square is an underground parking facility with roughly 210 spaces, occupying the space between the old shorefront and the wall of the old Ver-o-Peso quays.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(44)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(44)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="45" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/terminal-de-cruzeiros-de-lisboa-thumb.jpg);">
     <a href="/en/places/terminal-de-cruzeiros-de-lisboa/">
       <span class="place-number">45</span>
@@ -2534,13 +2646,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         On its site between Avenida Infante Dom Henrique and the Tagus, and between Praça do Comércio Santa Apolónia station, the new terminal is framed by the walls of the old docks which still remain there today. It will also serve as a kind of viewing point below the slopes of the Alfama neighbourhood and over the river, providing views of the city upwards – similar to that the perspective from large cruise ships – and taking in the impressive aspect of the huddled housing above which the silhouettes of the churches of São Vicente da Fora and Santa Engrácia and the castle stand out.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(45)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(45)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="46" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-em-alfama-thumb.jpg);">
     <a href="/en/places/apartamento-em-alfama/">
       <span class="place-number">46</span>
@@ -2570,13 +2684,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Located in the heart of the Alfama neighbourhood, this small apartment (55 sq. m) is on the second floor of a 4-storey building. While it was not possible to determine the year of construction, it was clear that over the years the apartment had undergone various interventions and extensions. The space is organised around the kitchen at its centre. Windowless, it provides access to all other rooms, thus adding the role of distributing space to that of its natural function of kitchen. From the apartment’s central point one has a full understanding of the entire living space. The marble used for the kitchen worktops and storage units and the bright yellow flooring are the eye-catching details in the apartment’s wet zones.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(46)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(46)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="47" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/santa-clara-1728-thumb.jpg);">
     <a href="/en/places/santa-clara-1728/">
       <span class="place-number">47</span>
@@ -2606,13 +2722,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         On its doorstep are the Santa Clara market, the National Pantheon and the River – and the Feira da Ladra flea market on Tuesdays and Saturdays. This 18th-century palatial building was converted to a sumptuous hotel of only six rooms, with a large communal dining room and secluded garden. Recreating the ambience of old Lisbon mansion houses, the remodelling project focused on already existing elements and used local, authentic materials, such as Lioz limestone, traditional azulejo tiles and wood.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(47)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(47)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="48" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/centro-inovacao-da-mouraria-thumb.jpg);">
     <a href="/en/places/centro-inovacao-da-mouraria/">
       <span class="place-number">48</span>
@@ -2642,6 +2760,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The MIC is a strategically important facility for the urban regeneration of this part of the city, functioning as an incubator for creative and cultural undertakings. Occupying a former mansion house from the 15th century (of which only the structural walls remained) in the Mouraria neighbourhood, the renovation sought to conserve the original morphology and character. The most prominent elements of the building were recovered, such as the stairways and wooden structures, and contemporary materials were introduced to explore the natural lighting potential and create a clear contrast between new and old.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(48)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(48)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -2742,7 +2862,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="8">
     <header>
-      <h3 id="av-liberdade-principe-real">Av. Liberdade e Príncipe Real</h3>
+      <h3 id="av-liberdade-principe-real">Liberdade Av. and Príncipe Real</h3>
     </header>
     <ul>
 
@@ -2844,7 +2964,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="49" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacio-da-bemposta-academia-militar-thumb.jpg);">
     <a href="/en/places/palacio-da-bemposta-academia-militar/">
       <span class="place-number">49</span>
@@ -2874,13 +2994,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Though it has witnessed many decisive periods in the history of Portugal, the Bemposta palace will always be associated with Catarina de Bragança, who became Queen Catherine, wife and widow of Charles II of England. Since the installation of the Portuguese Military Academy in 1851, it has been occupied by the Officer’s Schools of the Portuguese army, integrating in recent years officers of the Republican National Guard. Part of the civil parish of Arroios, its importance was recognised through its listing as a National Monument in 2001. It currently houses the Military Academy Command.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(49)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(49)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="50" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/igreja-sagrado-coracao-de-lisboa-thumb.jpg);">
     <a href="/en/places/igreja-sagrado-coracao-de-lisboa/">
       <span class="place-number">50</span>
@@ -2910,13 +3032,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Integrated in a larger parochial complex, this church dedicated to the Sacred Heart of Jesus, easily goes unnoticed by even the most attentive passer-by along the nearby street. Breaking with religious tradition, Nuno Portas and Nuno Teotónio Pereira returned to the original model of the Romanic church, emphasising the relationship between the sacred space and the surrounding community, in this case taken to the limit by the naked and urban character that the exposed concrete confers. Refined in its work with space, details and lighting, the church surprises the visitor with its monumental interior volumes. In 1975 it was awarded the Valmor Prize and it has been a National Monument since 2010.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(50)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(50)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="51" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/hotel-britania-thumb.jpg);">
     <a href="/en/places/hotel-britania/">
       <span class="place-number">51</span>
@@ -2946,13 +3070,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         A stand-out design by modernist architect Cassiano Branco from the 1940s, the Britânia is the only hotel building from that period that has survived intact to the modern day. Restored in accordance with its original Art Deco style, the hotel’s distinctiveness led to it being listed as a Lisbon historic building. When it opened on 13 October 1944, it was called Hotel do Império and it soon became a favourite haunt for high society, politicians and intellectuals. In 1950 the poetess Natália Correia married the hotel owner and manager and moved into the building next door, with the hotel becoming a natural extension of her literary salons attended by Portuguese artists and writers such as David Mourão-Ferreira, Almada Negreiros and Mário Cesariny, as well as international authors such as Marguerite Yourcenar, Henry Miller and Graham Greene. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(51)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(51)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="52" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/memmo-principe-real-thumb.jpg);">
     <a href="/en/places/memmo-principe-real/">
       <span class="place-number">52</span>
@@ -2982,13 +3108,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Located in the Príncipe Real district, this new building was designed to meet the new overwhelming demand for tourist accommodation in Lisbon. A five-star hotel with 41 rooms, accessed via a narrow passageway and a small tunnel leading to a private viewing point offering panoramic views of Lisbon. The hotel has been ingeniously integrated into this vantage point, almost levitating at the top of the slope. The building materials include Lioz limestone, so characteristic of historic buildings, palaces, monuments and squares in the city, in a design that combines classical and contemporary styles. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(52)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(52)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="53" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/reservatorio-da-patriarcal-thumb.jpg);">
     <a href="/en/places/reservatorio-da-patriarcal/">
       <span class="place-number">53</span>
@@ -3021,13 +3149,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The majestic stone chamber that constitutes the tório da Patriarcal (water cistern) is located below the Príncipe Real garden. Built between 1860 and 1864, the water cistern was once the most important point of water distribution for the lower-lying inner city. Octogonal in form, it features 31 pillars measuring 9.25 metres supporting stonework vaulting, giving the space an air of grandiosity. Fed by the Águas Livres aqueduct, it was deactivated in 1949. It also provides underground access to the Galeria do Loreto, which extends for 410 m, connecting to São Pedro de Alcântara garden.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(53)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(53)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="54" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacete-barao-dos-santos-thumb.jpg);">
     <a href="/en/places/palacete-barao-dos-santos/">
       <span class="place-number">54</span>
@@ -3060,13 +3190,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Built in 1862 by the widow of the Baron of Santos, Carolina Augusta de La Rocque, this small palace building in Príncipe Real has served as the seat of the Japanese Legation, the Casa de Braganza Foundation and Instituto Camões. It was abandoned in 2000. Though eclectic in style, it has a pronouncedly Classical decorative idiom, including a vestibule, a grand stairway and spaces that determine the organisation of the rooms on all the elevations. The ongoing remodelling project seeks to conserve as much of the original state as possible. This is a unique opportunity to see this renovation project, as the building will soon be divided into four private dwellings. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(54)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(54)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="55" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/laboratorio-chimico-thumb.jpg);">
     <a href="/en/places/laboratorio-chimico/">
       <span class="place-number">55</span>
@@ -3099,13 +3231,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This building is a rare example of the large-scale teaching and research laboratories belonging to European universities. Thanks to its monumentality, functionality and elegance, the Laboratory space offers the visitor a unique ambience that recalls past glories. Although it no longer functions as a laboratory, visitors to the space have the opportunity to experience its original purpose. On this particular visit the focus will be on the teaching of chemistry and the scientific instruments used in the 19th century.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(55)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(55)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="56" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/imprensa-nacional-thumb.jpg);">
     <a href="/en/places/imprensa-nacional/">
       <span class="place-number">56</span>
@@ -3135,6 +3269,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Designed by the architect of the City Hall, this state institution occupies a site where the Royal Printing Office had been located since 1769. A number of alterations were made to the original design by the engineers responsible for the construction of the various wings, and the building was finally opened in 1913. The main façade, looking onto Rua da Escola Politécnica, reflects an attempt to reinterpret Pombaline architecture. In 2013 the building was listed as a Monument of Public Interest.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(56)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(56)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -3219,7 +3355,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="12">
     <header>
-      <h3 id="campo-de-ourique-amoreiras">Campo de Ourique e Amoreiras</h3>
+      <h3 id="campo-de-ourique-amoreiras">Campo de Ourique and Amoreiras</h3>
     </header>
     <ul>
 
@@ -3337,7 +3473,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="57" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/escola-de-hotelaria-e-turismo-de-lisboa-thumb.jpg);">
     <a href="/en/places/escola-de-hotelaria-e-turismo-de-lisboa/">
       <span class="place-number">57</span>
@@ -3369,13 +3505,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(57)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(57)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="58" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-fernando-pessoa-thumb.jpg);">
     <a href="/en/places/casa-fernando-pessoa/">
       <span class="place-number">58</span>
@@ -3405,13 +3543,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         It was here, in the Campo de Ourique neighbourhood, that Fernando Pessoa lived the last 15 years of his life. This lively cultural venue contains a library and Pessoa’s original bedroom, with some of the writer’s original furniture and diverse personal objects, such as his typewriter, glasses and notebooks, on display. Opened in 1993, the renovation project on the building retained the original façade, central staircase and the poet’s room. On the façade, quotations from Pessoa’s work occupy the spaces between the windows and door openings, and on the floor of the entrance one can find the writer’s astral chart engraved in stone.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(58)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(58)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="59" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/cemiterio-dos-prazeres-thumb.jpg);">
     <a href="/en/places/cemiterio-dos-prazeres/">
       <span class="place-number">59</span>
@@ -3441,13 +3581,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         A great example of the Romantic style in Portugal, Prazeres Cemetery is the final resting place of many of the country’s most illustrious figures. A kind of open-air museum, it is a repository of important information on Portuguese modern history, architecture, urban planning, sculpture, as well as the changes approaches to the idea of death over the years. With its ambience marked by the serenity of the impressive cypresses, to walk through this space is to learn the history documented on its countless tombs. This tour will visit a number of tombs, in particular the interior of the Palmela Tomb, the largest private tomb in Europe.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(59)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(59)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="60" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/panoramico-thumb.jpg);">
     <a href="/en/places/panoramico/">
       <span class="place-number">60</span>
@@ -3477,13 +3619,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         No view over Lisbon can match that from the Panorâmico de Monsanto. Built at an altitude of 250 m above sea level, the building opened in 1968 and has served as a fine dining restaurant, a nightclub, a bingo hall, not to mention stints as office space and a store for building materials. Now empty for more than a decade, this outstanding work of architecture features in its interior ceramic panels by Manuela Madureira and a mural by Luís Dourdil. For now, Lisbon City Council aims to ensure that the building is safe and can be visited by all, thus returning this belvedere to the city and its residents.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(60)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(60)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="61" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/centro-de-meditacao-thumb.jpg);">
     <a href="/en/places/centro-de-meditacao/">
       <span class="place-number">61</span>
@@ -3513,13 +3657,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Hidden away in a cellar space in very nondescript area on the western edge of Lisbon lies a space made for meditation. Two doors mark the different programmes of the building in question: one provides private access to the living quarters; the other opens onto a succession of spaces at different levels on a descending course that ends on a veranda overlooking Monsanto forest park – the Meditation Centre.  Lighting is a decisive element in creating the various interior ambiences and erasing the boundary between interior and exterior. The meditation space allows the exterior landscape and the half-shade of the interior spaces to coexist in a shared place.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(61)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(61)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="62" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/aqueduto-das-aguas-livres-thumb.jpg);">
     <a href="/en/places/aqueduto-das-aguas-livres/">
       <span class="place-number">62</span>
@@ -3552,13 +3698,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Commissioned by King João V in 1731, the aqueduct was the first regular water supply system for the city of Lisbon. It extends to a total length of 58 kilometres. The monumental section included in this visit is the most iconic element of Lisbon’s old water distribution system and it withstood the earthquake of 1755. It spans the Alcântara valley over a length of 941 metres with the aid of 35 huge stone arches. The largest arch is 65 metres high and 32 metres wide. Deactivated in 1967, the aqueduct is one of the most remarkable works of hydraulic engineering ever realised.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(62)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(62)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="63" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/amoreiras-360-panoramic-view-thumb.jpg);">
     <a href="/en/places/amoreiras-360-panoramic-view/">
       <span class="place-number">63</span>
@@ -3588,13 +3736,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Located on top of one of the emblematic Amoreiras Towers, this 360º viewpoint is one of the city highest points – 174 metres above sea level. From this magnificent vantage point one enjoys breath-taking views over Lisbon spread over its seven hills to the River Tagus, Monsanto park, and the city’s most important monuments – the Castle, Belém Tower, Estrela Basilica, the Cathedral, the 25th April Bridge and the Christ the King statue on the river’s southern bank. The more curious visitor can avail of high-powered viewers, as well as maps with information on the city’s most iconic sights.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(63)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(63)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="64" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/reservatorio-da-mae-dagua-das-amoreiras-thumb.jpg);">
     <a href="/en/places/reservatorio-da-mae-dagua-das-amoreiras/">
       <span class="place-number">64</span>
@@ -3624,13 +3774,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         First proposed in 1746 and completed in 1834, the Mãe d’Água das Amoreiras water cistern collected and distributed the water brought into the city via the Aqueduto das Águas Livres (see above). With a capacity of 5,500 m3, it is 7.5 metres deep. The space features vaulted ceilings of great beauty, and a terrace on the roof affords magnificent views over Lisbon. Completed after the death of Carlos Mardel, it is a veritable “cathedral to water” that goes much further than serving its original function – it is one of the city’s most emblematic historic monuments.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(64)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(64)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="65" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/galeria-do-loreto-thumb.jpg);">
     <a href="/en/places/galeria-do-loreto/">
       <span class="place-number">65</span>
@@ -3660,13 +3812,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The Galeria do Loreto is one of five tunnels included in the Aqueduto das Águas Livres water supply system. The underground system extends to a total of 2,835 metres, including all branch tunnels.  This tunnel supplied water to a number of public institutions, including the Official Printing House, the Public Promenade, the Casa da Misericórdia, the garden at São Pedro de Alcântara and the Municipal Guard barracks in Largo do Carmo. It is a unique space that begins at the Casa do Registo next to the Mãe d’Água water cistern and ends at the square in front of the Teatro de São Carlos.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(65)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(65)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="66" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-na-rodrigo-da-fonseca-thumb.jpg);">
     <a href="/en/places/apartamento-na-rodrigo-da-fonseca/">
       <span class="place-number">66</span>
@@ -3699,13 +3853,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Built in the late 1930s, this apartment with unusual interior dimensions was defined by its gloomy 15-metre-long corridor. The recent intervention rebalances the space and adapts it to contemporary living. The corridor, which now receives much more light and features a bench lining it along one side, is now almost a living space in its own right, and not just a link between the reception rooms and the bedrooms.  The apartment’s new luminosity was achieved through specific spatial adaptations and creating a visual connection between the kitchen and the living room.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(66)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(66)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="67" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/hotel-ritz-thumb.jpg);">
     <a href="/en/places/hotel-ritz/">
       <span class="place-number">67</span>
@@ -3735,13 +3891,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Designed by Pardal Monteiro with collaboration from Jorge Ferreira Chaves (who designed the Pastelaria Mexicana), the Hotel Ritz is one of the most important examples of Portuguese modernist architecture and the first large luxury hotel to be built completely new in Lisbon. The design for such an imposing site over the inner city was governed by the principle of functional organisation, which is still the basis for the hotel’s excellence of service. The building is an excellent example of how a private owner can modernise and conserve a listed property, particularly one operating in such a demanding sector as hospitality. In its interior the Ritz also features an extensive and noteworthy collection of art works by Portuguese artists. It remains a benchmark for luxury hospitality in the city of Lisbon.   
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(67)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(67)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="68" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/palacio-da-justica-thumb.jpg);">
     <a href="/en/places/palacio-da-justica/">
       <span class="place-number">68</span>
@@ -3771,6 +3929,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The Lisbon Civil Courts building, designed by Januário Godinho and João Andresen, represents a break with tradition, as it adopts a modernist language of great conceptual originality. Its urban setting, volume, expression and functionality, together with the new materials used in its construction, make it a building that stands on its own and for itself, even though it was designed as part of a larger complex that was to form the Lisbon Justice Forum. The significance and force of its monumental aspect are undeniable, and heightened by its location at one of the highest points in the city, at the same elevation as the Castelo de São Jorge.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(68)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(68)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -3831,7 +3991,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="12">
     <header>
-      <h3 id="avenidas-novas-benfica">Avenidas Novas e Benfica</h3>
+      <h3 id="avenidas-novas-benfica">Avenidas Novas and Benfica</h3>
     </header>
     <ul>
 
@@ -3973,7 +4133,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="69" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/fundacao-calouste-gulbenkian-thumb.jpg);">
     <a href="/en/places/fundacao-calouste-gulbenkian/">
       <span class="place-number">69</span>
@@ -4003,13 +4163,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This building and its garden, which merge perfectly to form a unit, are regarded by Lisboans as theirs and used intensively on a daily basis. Opened in 1969, the Gulbenkian was listed as a National Monument on the basis of the recognition of its outstanding architectural and landscaping qualities. The most recent landscaping intervention in the gardens was the work of Gonçalo Ribeiro Telles. Recently the name of the Centre for Modern Art (opened in 1983) was retired and Calouste Gulbenkian Museum is now used for both buildings and the collections they house: the Founder and Modern collections.   
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(69)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(69)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="70" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/corredor-verde-thumb.jpg);">
     <a href="/en/places/corredor-verde/">
       <span class="place-number">70</span>
@@ -4043,13 +4205,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(70)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(70)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="71" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-museu-dr-anastacio-goncalves-thumb.jpg);">
     <a href="/en/places/casa-museu-dr-anastacio-goncalves/">
       <span class="place-number">71</span>
@@ -4079,13 +4243,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Built to a design by Norte Júnior in 1904/05, this house was commissioned by the painter José Malhoa to serve as his residence and studio. The first artist’s house in Lisbon, and winner of the Valmor Prize in 1905, in urban development terms it reflects the plans for expansion of the city and is an important example of late 19th-century Portuguese architecture. In 1932 the “Malhoa House” was purchased by Dr Anastácio Gonçalves, who lived and organised his collection there until his death in 1965.  It was inaugurated as a Museum House in 1980 and underwent extension and renovation works in 1996, which included the annexation of a new house to the original building. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(71)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(71)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="72" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/casa-da-moeda-thumb.jpg);">
     <a href="/en/places/casa-da-moeda/">
       <span class="place-number">72</span>
@@ -4115,13 +4281,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Occupying a whole block, the Portuguese Mint building is made up of two programmatically distinct but interlinked bodies, housing the administration offices and the production spaces, without a loss of architectural consistency. Its construction was determined during the early phase of the Estado Novo regime, under Minister Duarte Pacheco, and it began operating in 1941. The building is a perfect example of the work of Jorge Segurado, where experimentations with the modernist lexicon were reflected down to the smallest details. What remains in the memory of the visitor are the rhythmic façades with sequences of pilasters, the exterior cladding in beautiful green azulejo tiles and the detailed main entrance. It was listed as a Monument of Public Interest in 2012.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(72)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(72)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="73" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/teatro-thalia-thumb.jpg);">
     <a href="/en/places/teatro-thalia/">
       <span class="place-number">73</span>
@@ -4154,13 +4322,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Built in 1820 by the first Count of Farrabo, the Teatro Thalia underwent renovation work in 1842 for the installation of gas lighting. In 1862 it was destroyed by fire and remained in that state until 2009. The space as it is today is the result of a reimagining of the auditorium and stage. The ambience of a ruin remains visible in the interior, itself constituting an imposing theatrical setting. On the façade the peristyle is marked by four white marble columns with sphinxes at their base. The triangular pediment, with a plain tympanum and topped with a statue of Erato, bears the Latin inscription Hic Mores Hominum Castigantur (Here the mores of men shall be punished).
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(73)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(73)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="74" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/praca-fonte-nova-thumb.jpg);">
     <a href="/en/places/praca-fonte-nova/">
       <span class="place-number">74</span>
@@ -4193,13 +4363,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The reinvention of an urban plaza. This project sought to achieve a new balance in the plaza’s already established functions and to promote the use of the public space as a place of relaxation and leisure over its use as a parking lot. The large open space has been turned into a platform that unites the two sections of Estrada de Benfica separated by the motorway viaduct, allowing for continuous pedestrian circulation from east to west. A new relationship between the Fonte Nova shopping centre and the neighbouring services and commercial buildings was defined, with the aim of supporting local business. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(74)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(74)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="75" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/centro-ismaili-thumb.jpg);">
     <a href="/en/places/centro-ismaili/">
       <span class="place-number">75</span>
@@ -4229,13 +4401,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Lisbon’s Ismaili Centre was the first facility in Continental Europe that combined meeting spaces for Ismaili Muslims with the installations of an international social, cultural and economic development network for people of all faiths, backgrounds and origins. Built around a number of patios, the buildings integrate multi-use spaces and open areas designed for social functions and cultural and educational events. The design, a rare example of Islam-inspired architecture in Portugal, nods to the geometric patterns in traditional Muslim arts while allying contemporary building techniques and local materials. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(75)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(75)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="76" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/biblioteca-nacional-de-portugal-thumb.jpg);">
     <a href="/en/places/biblioteca-nacional-de-portugal/">
       <span class="place-number">76</span>
@@ -4265,13 +4439,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The last large-scale design project by Porfírio Pardal Monteiro, with the work continued on by his nephew António Pardal Monteiro, this was the first dedicated building built completely new for the National Library. Opened in 1969, with a built surface area of some 60,000 sq. m, this book depository was extended and remodelled between 2008 and 2012. The building stands out for its functionality, which still meets today’s standards, scale and the light in its interior space, as well as the interior design of the main public zones by Daciano da Costa. This tour will take visitors through the public spaces, but also to areas behind the scenes, such as the archives and conservation areas.   
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(76)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(76)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="77" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/escritorio-pure-thumb.jpg);">
     <a href="/en/places/escritorio-pure/">
       <span class="place-number">77</span>
@@ -4301,13 +4477,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The brief for this design was by all means original: to create intimate and private office space for a dating app called Pure. In creating this work ambience the designers used one specific structuring element: curtains. Various spaces in the offices can be separated off by curtains, creating shapeshifting spaces and guaranteeing informal and flexible use. This thematic design element makes it possible to open the space up and experience it as one single unit or divide it into dedicated spaces: work room, conference room, lounge and break room.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(77)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(77)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="78" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/galeria-quadrum-thumb.jpg);">
     <a href="/en/places/galeria-quadrum/">
       <span class="place-number">78</span>
@@ -4337,13 +4515,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The realisation of a dream by the artist and collector Dulce D’Agro, the Quadrum gallery had its opening exhibition in November 1973. Installed in the Coruchéus palace and designed by Fernando Peres, Quadrum became a laboratory for Portuguese experimental art in the 1970s and 80s. It featured important Portuguese artists such as Alberto Carneiro, Ana Hatherly, Ernesto de Sousa and Helena Almeida, as well as the international artists Vasarely, Gina Pane, Ulrike Rosenbach and Dany Bloch. After a period in which it was closed, Quadrum reopened under the management of EGEAC. Today, as part of the Coruchéus art studio complex, it remains a space of experimentation on and for contemporary art.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(78)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(78)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="79" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-na-av-estados-unidos-da-america-thumb.jpg);">
     <a href="/en/places/apartamento-na-av-estados-unidos-da-america/">
       <span class="place-number">79</span>
@@ -4376,13 +4556,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The four buildings on the intersection of Avenida de Roma and Avenida dos Estados Unidos are one of the most important works of Lisbon architecture from the 1950s. This visit will focus on one apartment originally designed as an art studio that has breath-taking panoramic views. It has now been converted to an apartment, with the intervention focusing on removing elements added to the original space over the years (glassed-off balconies, air conditioning, dividing walls and lowered ceilings) and highlighting the original characteristics, as well as the extraordinary light and views over the city, which are major arguments in favour of the original architecture.   
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(79)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(79)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="80" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/apartamento-estacas-thumb.jpg);">
     <a href="/en/places/apartamento-estacas/">
       <span class="place-number">80</span>
@@ -4415,6 +4597,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The “Bairro das Estacas” [a complex of apartment buildings raised on round pillars] is regarded as a milestone development for modern architecture in Portugal. This renovation project set out to completely remodel the apartment, adapting it to contemporary living and reinstating the original interior relationships by restoring the original balconies over the gardens that characterised the urban plan for this estate. The interior is now defined and structured by a new body – a line of closets that organises and provides support to the dwelling’s various spaces (storage space was a fundamental aspect of the new programme). The parquet flooring, also in the kitchen and the bathrooms, unifies the space and lends an image of continuity.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(80)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(80)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -4451,7 +4635,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
   
   <section class="tag-section" data-total="7">
     <header>
-      <h3 id="oriente">Oriente</h3>
+      <h3 id="oriente">East</h3>
     </header>
     <ul>
 
@@ -4617,7 +4801,7 @@ This reorganisation saw the removal of walls and the insertion of a new one that
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="81" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/museu-nacional-do-azulejo-thumb.jpg);">
     <a href="/en/places/museu-nacional-do-azulejo/">
       <span class="place-number">81</span>
@@ -4656,13 +4840,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The history of the azulejo tile in Portugal from the late 15th century to the present day is told in the former Madre Deus convent that was founded in 1509 by Queen Leonor. The convent was always received special attention from the Portuguese royal family and underwent several renovations over the centuries. Thanks to the interventions in the 17th and 18th centuries, the convent church, originally from 1550, is recognised as one of the foremost examples of the Baroque decorative style in Portugal.  
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(81)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(81)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="82" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/ar-co-thumb.jpg);">
     <a href="/en/places/ar-co/">
       <span class="place-number">82</span>
@@ -4695,13 +4881,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The former Xabregas Market, built in 1956 to a modernist design, now houses the Ar.Co Art and Visual Communication School. The remodelling project adopted a new idiom, with steps and ramps in concrete, steel grid rails and elements in painted steel sheeting reflecting the choices made to redesign and revitalise the space. Where once fresh produce was sold, now Photography, Painting, Drawing, Illustration/Comic, Jewellery, Cinema, and Art History and Theory classes are given. This project is part of the overall plan to transform this part of East Lisbon into a new urban and cultural hub.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(82)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(82)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="83" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/vertigo-thumb.jpg);">
     <a href="/en/places/vertigo/">
       <span class="place-number">83</span>
@@ -4731,13 +4919,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Occupying a large industrial warehouse on the riverfront, Vertigo is not just a climbing space but also an architectural design project. As a symbolic memorial to Lisbon’s industrial past, a structure made of stacked pieces of concrete and blocks of pinewood painted red marks the entrance to an interior space where black metallic elements dominate. A flexible approach has been taken to the layout, allowing for differing uses, including a cafeteria and visitor reception area. Visiting the Vertigo centre also means being able to try out the climbing walls (on indicated tours only).
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(83)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(83)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="84" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/loja-sothebys-thumb.jpg);">
     <a href="/en/places/loja-sothebys/">
       <span class="place-number">84</span>
@@ -4767,13 +4957,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The interior design brief for these estate agent premises in Parque das Nações was to reinvent the interior space of a pre-existing shop located in an office building. The client required a number of individual offices and conference rooms with support zones, as well as a public zone in which to receive clients. The layout strategy freed up as large a space as possible for the public area, with the double ceiling height adding to the feeling of space and abundance of light. Given the inspiration for the reception area was as a public space, it contrasts with the private, secluded character of the offices and other work spaces, which seem to evoke the idea of being a small building of their own. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(84)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(84)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="85" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/pavilhao-de-portugal-thumb.jpg);">
     <a href="/en/places/pavilhao-de-portugal/">
       <span class="place-number">85</span>
@@ -4803,13 +4995,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         This building is a symbol – an icon – of the exposure and expansion Expo ’98 meant for the city of Lisbon. Immediately recognisable by its huge curving reinforced concrete roof, it consists of two separate areas: the Ceremonial Square, which is a generous sheltered outdoor space, and a two-storey building (plus a basement level) structured around an internal patio. Creating a visual association between earth and water, the pavilion’s monumental scale seems to play with traditional forms and the modern lines of modernity. 
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(85)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(85)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="86" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/central-norte-de-recolha-pneumatica-de-residuos-urbanos-thumb.jpg);">
     <a href="/en/places/central-norte-de-recolha-pneumatica-de-residuos-urbanos/">
       <span class="place-number">86</span>
@@ -4839,13 +5033,15 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         Few cities can boast of having a solid waste treatment system like this one, and this is the world’s largest. An intricate and complex work, it is a system for the collection of treatment of urban solid waste by vacuum serving a large area of the Parque das Nações north zone. The plant has two storeys and is equipped the latest and most innovative technology and equipment. This is a rare opportunity to observe the workings of such an impressive infrastructure from close up.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(86)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(86)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
     
     
     
-    <li class="place-thumb-container visible">
+    <li class="place-thumb-container visible" data-number="87" >
   <div class="place-thumb" style="background-image: url(https://s3-eu-west-1.amazonaws.com/openhouselisboa-imagens/img/aeroporto-humberto-delgado-thumb.jpg);">
     <a href="/en/places/aeroporto-humberto-delgado/">
       <span class="place-number">87</span>
@@ -4875,6 +5071,8 @@ This reorganisation saw the removal of walls and the insertion of a new one that
         The Lisbon Airport is one of the largest public works projects undertaken in the Estado Novo period. Of the original design one should note that the architecture was characterised by a reformist approach, seeking a return to new, modern forms and abandoning the preferred styles and models. In this sense, the airport was one of the most positive moves towards reforming architecture for public works. The tour takes in Terminal 1 (including the baggage reclaim areas and central control and management zones), the airport apron and service areas for the apron and runways.
       </div>
     </a>
+    <button class="favourite-button add-favourite" title="Add to Favourites" onclick="favourite(87)" style="display: none;"><img src="/assets/favourite-false-light.svg" alt="Add to Favourites"></button>
+    <button class="favourite-button remove-favourite" title="Remove from Favourites" onclick="favourite(87)" style="display: none;"><img src="/assets/favourite-true-light.svg" alt="Remove from Favourites"></button>
   </div>
 </li>
 
@@ -4934,7 +5132,8 @@ function filterPlaces() {
 	if (searchInput.val().length > 0) {
 		filter(searchInput.val(), false, false);
 	}
-	checkListHeaders()
+	checkListHeaders();
+	loadFavourites();
 }
 
 $(document).ready(function () {
@@ -4998,14 +5197,11 @@ $(document).ready(function () {
         </ul>
         
         
-        <p class="contact-link"><a href="mailto:joana.salvado@trienaldelisboa.com">If you want to be a partner, tells us where we should go have a coffee: joana.salvado@trienaldelisboa.com</a></p>
+        <p class="contact-link">If you want to be a partner, tells us where we should go have a coffee: <br><a href="mailto:joana.salvado@trienaldelisboa.com">joana.salvado@trienaldelisboa.com</a></p>
         
         
-        <p class="contact-link"><a href="mailto:openhouselisboa@trienaldelisboa.com">If you're an architect, provoke us </a></p>
+        <p class="contact-link">If you're an architect, provoke us : <br><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
-        
-        
-        <p class="contact-link" id="email"><a href="mailto:openhouselisboa@trienaldelisboa.com">openhouselisboa@trienaldelisboa.com</a></p>
         
         
         
@@ -5074,9 +5270,26 @@ $(document).ready(function () {
         });
         
       });
+      
+    </script>
+    <script src="/assets/js/favourites.js"></script>
+    <script>
+
+      $(function() {
+        if (localStorageSupported()) {
+          loadFavourites();
+          showFavouriteButtons();
+        }
+        
+      })
+
     </script>
     
 
+    <script>
+      var siteYear = 2017;
+    </script>
+    
     
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
