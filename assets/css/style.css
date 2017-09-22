@@ -1991,44 +1991,28 @@ a.link-share:hover i[class$="white"] {
 .places-nav > div:last-child {
   margin-right: 0;
 }
-@media screen and (min-width: 57em) {
+@media screen and (min-width: 64em) {
   .places-nav > div {
-    float: left;
-    display: block;
-    margin-right: 2.9850746269%;
-    width: 48.5074626866%;
+    margin-top: 0;
     margin-bottom: 0;
-  }
-  .places-nav > div:last-child {
-    margin-right: 0;
   }
   .places-nav > div.taxonomy-selector {
     float: left;
     display: block;
     margin-right: 2.9850746269%;
-    width: 100%;
+    width: 74.2537313433%;
   }
   .places-nav > div.taxonomy-selector:last-child {
     margin-right: 0;
   }
-}
-@media screen and (min-width: 64em) {
-  .places-nav > div {
+  .places-nav > div.search-filter {
     float: left;
     display: block;
     margin-right: 2.9850746269%;
     width: 22.7611940299%;
-  }
-  .places-nav > div:last-child {
     margin-right: 0;
   }
-  .places-nav > div.taxonomy-selector {
-    float: left;
-    display: block;
-    margin-right: 2.9850746269%;
-    width: 48.5074626866%;
-  }
-  .places-nav > div.taxonomy-selector:last-child {
+  .places-nav > div.search-filter:last-child {
     margin-right: 0;
   }
 }
@@ -2092,11 +2076,11 @@ a.link-share:hover i[class$="white"] {
 }
 
 .places-nav .favourites-button {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
-@media screen and (min-width: 64em) {
+@media screen and (min-width: 57em) {
   .places-nav .favourites-button {
-    margin-top: 0;
+    display: none;
   }
 }
 .places-nav .favourites-button a {
@@ -2108,7 +2092,7 @@ a.link-share:hover i[class$="white"] {
 }
 
 .search-filter {
-  margin-top: 1em;
+  margin-top: 0.5em;
 }
 @media screen and (min-width: 64em) {
   .search-filter {
