@@ -2593,6 +2593,7 @@ a.top-link i {
 .timetable-index > ul > li > div a {
   display: inline-block;
   font-weight: bold;
+  margin-bottom: 0.5em;
 }
 .timetable-index > ul > li > ul {
   float: left;
