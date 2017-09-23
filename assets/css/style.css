@@ -3383,7 +3383,7 @@ article.post .post-share li {
 }
 @media screen and (min-width: 40em) {
   #now-button a {
-    border: 4px solid #F3DCD7;
+    border: 2px solid #F3DCD7;
   }
 }
 #now-button.now-timetable {
@@ -3407,8 +3407,8 @@ article.post .post-share li {
 #now-button.now-timetable a {
   padding: 0.5em;
   font-size: 0.875em;
-  border: 4px solid #F3DCD7;
-  margin-left: -4px;
+  border: 2px solid #F3DCD7;
+  margin-left: -2px;
 }
 @media screen and (min-width: 40em) {
   #now-button.now-timetable a {
