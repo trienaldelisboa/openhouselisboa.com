@@ -1512,9 +1512,11 @@ a.link-share:hover i[class$="white"] {
   padding: 0.25em 0.5em;
   z-index: 1000;
   opacity: 0;
+  pointer-events: none;
 }
 #skip-navigation:focus {
   opacity: 1;
+  pointer-events: auto;
 }
 
 .site-footer {
@@ -3361,6 +3363,7 @@ article.post .post-share li {
   left: 0;
   right: 0;
   text-align: center;
+  z-index: 100;
 }
 @media screen and (min-width: 40em) {
   #now-button {
@@ -3375,11 +3378,11 @@ article.post .post-share li {
   display: block;
   font-weight: bold;
   text-transform: uppercase;
-  color: #fff;
+  color: #F3DCD7;
 }
 @media screen and (min-width: 40em) {
   #now-button a {
-    border: 4px solid white;
+    border: 4px solid #F3DCD7;
   }
 }
 #now-button.now-timetable {
