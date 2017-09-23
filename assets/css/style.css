@@ -2551,13 +2551,9 @@ section.time-section li a .place-number {
 
 a.top-link {
   border: none;
-  display: block;
   float: right;
-  width: 1em;
-  height: 1em;
-}
-a.top-link i {
-  display: block;
+  font-weight: bold;
+  line-height: 1.25;
 }
 
 .header-page.timetable h2 {
